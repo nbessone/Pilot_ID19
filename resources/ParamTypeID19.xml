@@ -1,0 +1,2146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- ================================================================================== -->
+<!-- List of ParameterTypes for ID19 -->
+<!-- ================================================================================== -->
+
+<icatdata>
+	<config xmlns:java="java">
+		<haltOnError>false</haltOnError>
+		<localIdRange>
+			<min />
+			<max>0</max>
+		</localIdRange>
+		<searchids>
+			<search>
+				<id>-1</id>
+				<query>Facility [name = 'ESRF']</query>
+			</search>
+		</searchids>
+	</config>
+
+	<!-- ================================================================================== -->
+
+	<!-- <facility> <name>ESRF</name> <fullName>European Synchrotron Radiation 
+		Facility</fullName> <description>The world's best synchrotron :-)</description> 
+		<daysUntilRelease>0</daysUntilRelease> <url>http://www.esrf.eu</url> </facility> -->
+
+	<instrument>
+		<name>ID19</name>
+		<fullName>Beamline ID19</fullName>
+		<description>Tomography Beamline</description>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<type>Beamline</type>
+	</instrument>
+
+	<investigationType>
+		<name>MX</name>
+		<description>Macromolecular christallography</description>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+	</investigationType>
+
+	<investigationType>
+		<name>MA</name>
+		<description>Applied material science</description>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+	</investigationType>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
+	<investigationType>
+		<name>CH</name>
+		<description>Applied material science</description>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+	</investigationType>
+	
+		<investigationType>
+		<name>EC</name>
+		<description>Applied material science</description>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+	</investigationType>
+	
+		<investigationType>
+		<name>ES</name>
+		<description>Applied material science</description>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+	</investigationType>
+	
+		<investigationType>
+		<name>EV</name>
+		<description>Applied material science</description>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+	</investigationType>
+	
+		<investigationType>
+		<name>HC</name>
+		<description>Applied material science</description>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+	</investigationType>
+	
+		<investigationType>
+		<name>HG</name>
+		<description>Applied material science</description>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+	</investigationType>
+	
+		<investigationType>
+		<name>LS</name>
+		<description>Applied material science</description>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+	</investigationType>
+	
+		<investigationType>
+		<name>MD</name>
+		<description>Applied material science</description>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+	</investigationType>
+	
+		<investigationType>
+		<name>ME</name>
+		<description>Applied material science</description>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+	</investigationType>
+	
+		<investigationType>
+		<name>MI</name>
+		<description>Applied material science</description>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+	</investigationType>
+	
+		<investigationType>
+		<name>SC</name>
+		<description>Applied material science</description>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+	</investigationType>
+
+
+
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+	<!-- DATA FILE FORMAT -->
+
+	<datafileFormat>
+		<description>Edf file format</description>
+		<name>EDF</name>
+		<type>hdf5</type>
+		<version>1.0</version>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+	</datafileFormat>
+
+	<!-- edf FILE -->
+
+	<!-- DATA SET TYPE -->
+
+	<datasetType>
+		<name>acquisition</name>
+		<description>One single Scan</description>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+	</datasetType>
+
+	<!-- PARAMETER TYPE -->
+
+	<!-- ========================================= -->
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>false</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>true</applicableToInvestigation>
+		<name>sourceSampleDistance</name>
+		<description>Source/sample distance</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>STRING</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>false</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>true</applicableToInvestigation>
+		<name>machineMode</name>
+		<description>Machine mode</description>
+		<units></units>
+		<unitsFullName></unitsFullName>
+		<valueType>STRING</valueType>
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>false</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>true</applicableToInvestigation>
+		<name>cameraName</name>
+		<description>Camera Name</description>
+		<units></units>
+		<unitsFullName></unitsFullName>
+		<valueType>STRING</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<!-- =================================================== -->
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>machineCurrentStart</name>
+		<description>Machine current at the beginning </description>
+		<units>mA</units>
+		<unitsFullName>milli Amper</unitsFullName>
+		<valueType>NUMERIC</valueType>
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>machineCurrentStop</name>
+		<description>Machine current at the end </description>
+		<units>mA</units>
+		<unitsFullName>milli Amper</unitsFullName>
+		<valueType>NUMERIC</valueType>
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>insertionDeviceName</name>
+		<description>insertionDeviceName</description>
+		<units></units>
+		<unitsFullName></unitsFullName>
+		<valueType>STRING</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>insertionDeviceGap</name>
+		<description>insertionDeviceGap</description>
+		<units>mm</units>
+		<unitsFullName>millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>filter</name>
+		<description>Filters name</description>
+		<units></units>
+		<unitsFullName></unitsFullName>
+		<valueType>STRING</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>monochromatorName</name>
+		<description>Monochromator Name</description>
+		<units></units>
+		<unitsFullName></unitsFullName>
+		<valueType>STRING</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>energy</name>
+		<description>Energy</description>
+		<units>keV</units>
+		<unitsFullName>Kiloelectron volt </unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>tomo_N</name>
+		<description>Projections NUMERIC</description>
+		<units></units>
+		<unitsFullName></unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>ref_On</name>
+		<description>Reference images every REF_ON projections</description>
+		<units></units>
+		<unitsFullName></unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>ref_N</name>
+		<description>Reference images NUMERIC</description>
+		<units></units>
+		<unitsFullName></unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>dark_N</name>
+		<description>Dark images NUMERIC</description>
+		<units></units>
+		<unitsFullName></unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>y_Step</name>
+		<description>Sample translation for reference images</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>ccdtime</name>
+		<description>Exposure time</description>
+		<units>s</units>
+		<unitsFullName>Seconds</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>scanDuration</name>
+		<description>Total acquisition time</description>
+		<units>min</units>
+		<unitsFullName>minutes?</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>distance</name>
+		<description>Sample/detector distance</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>scanRange</name>
+		<description>Scan Range</description>
+		<units>degree</units>
+		<unitsFullName>Degree</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>scanType</name>
+		<description>Scan type can be 'step_by_step' or 'continuous'
+		</description>
+		<units></units>
+		<unitsFullName></unitsFullName>
+		<valueType>STRING</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>realFinalAngles</name>
+		<description>Final angles really achieved after each reference group
+		</description>
+		<units>degree</units>
+		<unitsFullName>Degree</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>opticsName</name>
+		<description>Optics Name</description>
+		<units></units>
+		<unitsFullName></unitsFullName>
+		<valueType>STRING</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>scintillator</name>
+		<description>Scintillator name</description>
+		<units></units>
+		<unitsFullName></unitsFullName>
+		<valueType>STRING</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>cameraBinning</name>
+		<description>Camera Binning mode</description>
+		<units></units>
+		<unitsFullName></unitsFullName>
+		<valueType>STRING</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>cameraFibers</name>
+		<description>Camera Optic Fibers</description>
+		<units></units>
+		<unitsFullName></unitsFullName>
+		<valueType>STRING</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>pixelSize</name>
+		<description>Pixel Size</description>
+		<units>micron</units>
+		<unitsFullName>Micrometre</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>ccdMode</name>
+		<description>CCD mode can be 'FFM' or 'FTM'</description>
+		<units></units>
+		<unitsFullName></unitsFullName>
+		<valueType>STRING</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>projectionSize_ROW_BEG</name>
+		<description>Position of the projection first row</description>
+		<units>Pixels</units>
+		<unitsFullName>Pixels</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>projectionSize_ROW_END</name>
+		<description>Position of the projection last row</description>
+		<units>Pixel</units>
+		<unitsFullName>Pixel</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>projectionSize_COL_BEG</name>
+		<description>Position of the projection first column</description>
+		<units>Pixel</units>
+		<unitsFullName>Pixel</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>projectionSize_COL_END</name>
+		<description>Position of the projection last column</description>
+		<units>Pixel</units>
+		<unitsFullName>Pixel</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>projectionSize_DIM_1</name>
+		<description>Projection size along X axis</description>
+		<units>Pixel</units>
+		<unitsFullName>Pixel</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>projectionSize_DIM_2</name>
+		<description>Projection size along Y axis</description>
+		<units>Pixel</units>
+		<unitsFullName>Pixel</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>slit_PS_HG</name>
+		<description>Horizontal gap</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>slit_PS_VG</name>
+		<description>Vertical gap</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>slit_PS_HO</name>
+		<description>Horizontal offset</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>slit_PS_VO</name>
+		<description>Vertical offset</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>slit_PS_UP</name>
+		<description>UP</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>slit_PS_DOWN</name>
+		<description>DOWN</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>slit_PS_FRONT</name>
+		<description>FRONT</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>slit_PS_BACK</name>
+		<description>BACK</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>slit_SS_HG</name>
+		<description>Horizontal gap</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>slit_SS_VG</name>
+		<description>Vertical gap</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>slit_SS_HO</name>
+		<description>Horizontal offset</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>STRING</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>slit_SS_VO</name>
+		<description>Vertical offset</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>slit_SS_UP</name>
+		<description>UP</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>slit_SS_DOWN</name>
+		<description>DOWN</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>slit_SS_FRONT</name>
+		<description>FRONT</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>slit_SS_BACK</name>
+		<description>BACK</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>slit_BS_HG</name>
+		<description>Horizontal gap</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>slit_BS_VG</name>
+		<description>Vertical gap</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>slit_BS_HO</name>
+		<description>Horizontal offset</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>slit_BS_VO</name>
+		<description>Vertical offset</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>slit_BS_UP</name>
+		<description>UP</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>slit_BS_DOWN</name>
+		<description>DOWN</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>slit_BS_FRONT</name>
+		<description>FRONT</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>slit_BS_BACK</name>
+		<description>BACK</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_rien</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_srot</name>
+		<description>Motor position</description>
+		<units>deg</units>
+		<unitsFullName>Degree</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_yrot</name>
+		<description>Motor position</description>
+		<units>deg</units>
+		<unitsFullName>Degree</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_sz</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_sx</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_sy</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_xc</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_yc</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_zc1</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_m1focus</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_m1rotc</name>
+		<description>Motor position</description>
+		<units>deg</units>
+		<unitsFullName>Degree</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_m2focus</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_m2rotc</name>
+		<description>Motor position</description>
+		<units>deg</units>
+		<unitsFullName>Degree</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_euro1</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_cmx</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_cmz</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_cmfocus</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_cmrotc</name>
+		<description>Motor position</description>
+		<units>deg</units>
+		<unitsFullName>Degree</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_pz1</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_r1</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_zfourmr</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_simap</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_zc2</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_urev</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_gu32u</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_gw150m</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_gu32d</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_thx</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_thy</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_thz</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_z0</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_zc</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_hrrotc</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_ut</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_lt</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_yml</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_zfour</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_hrfocus</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_ydeco</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_focrev</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_anglem</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	
+	
+
+
+	<!-- SAMPLE TYPE -->
+
+
+</icatdata>

@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<icatdata>
+<config xmlns:java="java">
+<haltOnError>false</haltOnError>
+<localIdRange>
+<min/>
+<max>0</max>
+</localIdRange>
+<searchids>
+<search>
+<id>-1</id>
+<query>Investigation [id = 166830]</query>      
+</search>
+<search>
+<id>-3</id>
+<query>DatafileFormat [name = 'EDF']</query>
+</search>
+</searchids>
+</config>
+                                              
+                              
+                
+                
+                <dataset>
+<id xmlns:java="java">-2</id>
+<name>HA_5.06_Al2_Cu0.5_U176-11.5_rhynie-chert_RC15_xc1000_</name>
+<location>/data/visitor/ec1021/id19</location>
+<startDate>2012-11-16T09:08:55</startDate>
+<complete>
+				true
+			</complete>
+<investigation>
+<id xmlns:java="java">-1</id>
+</investigation>
+<type>
+<searchId>DatasetType [name = 'acquisition']</searchId>
+</type>
+</dataset>
+                
+                
+                <investigationParameter>
+<stringValue>7/8 multibunch</stringValue>
+<type>
+<searchId>ParameterType [name = 'machineMode']</searchId>
+</type>
+<investigation>
+<id xmlns:java="java">-1</id>
+</investigation>
+</investigationParameter>
+                <datasetParameter>
+<numericValue>160.758</numericValue>
+<type>
+<searchId>ParameterType [name = 'machineCurrentStart']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                <datasetParameter>
+<numericValue>201.125</numericValue>
+<type>
+<searchId>ParameterType [name = 'machineCurrentStop']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                <datasetParameter>
+<stringValue>U32d</stringValue>
+<type>
+<searchId>ParameterType [name = 'insertionDeviceName']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                <datasetParameter>
+<numericValue>11.5</numericValue>
+<type>
+<searchId>ParameterType [name = 'insertionDeviceGap']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                <datasetParameter>
+<stringValue> diam_1.4_mm Al_2_mm_U Cu_0.5_mm</stringValue>
+<type>
+<searchId>ParameterType [name = 'filter']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                <datasetParameter>
+<stringValue>0</stringValue>
+<type>
+<searchId>ParameterType [name = 'monochromatorName']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                <datasetParameter>
+<numericValue>0</numericValue>
+<type>
+<searchId>ParameterType [name = 'energy']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                <datasetParameter>
+<numericValue>4998</numericValue>
+<type>
+<searchId>ParameterType [name = 'tomo_N']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                <datasetParameter>
+<numericValue>4998</numericValue>
+<type>
+<searchId>ParameterType [name = 'ref_On']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                <datasetParameter>
+<numericValue>41</numericValue>
+<type>
+<searchId>ParameterType [name = 'ref_N']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                <datasetParameter>
+<numericValue>20</numericValue>
+<type>
+<searchId>ParameterType [name = 'dark_N']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                <datasetParameter>
+<numericValue>-50</numericValue>
+<type>
+<searchId>ParameterType [name = 'y_Step']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                <datasetParameter>
+<numericValue>0.15</numericValue>
+<type>
+<searchId>ParameterType [name = 'ccdtime']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                <datasetParameter>
+<numericValue>16.0742</numericValue>
+<type>
+<searchId>ParameterType [name = 'scanDuration']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                <datasetParameter>
+<numericValue>1000</numericValue>
+<type>
+<searchId>ParameterType [name = 'distance']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                <investigationParameter>
+<stringValue>145000</stringValue>
+<type>
+<searchId>ParameterType [name = 'sourceSampleDistance']</searchId>
+</type>
+<investigation>
+<id xmlns:java="java">-1</id>
+</investigation>
+</investigationParameter>
+                <datasetParameter>
+<numericValue>360</numericValue>
+<type>
+<searchId>ParameterType [name = 'scanRange']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                <datasetParameter>
+<stringValue>continuous</stringValue>
+<type>
+<searchId>ParameterType [name = 'scanType']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                <datasetParameter>
+<numericValue>360.013281</numericValue>
+<type>
+<searchId>ParameterType [name = 'realFinalAngles']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                <datasetParameter>
+<stringValue>ID19  5.02 um: pxsize 5.05 magn 2.77</stringValue>
+<type>
+<searchId>ParameterType [name = 'opticsName']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                <datasetParameter>
+<stringValue>LuAg_200</stringValue>
+<type>
+<searchId>ParameterType [name = 'scintillator']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                <investigationParameter>
+<stringValue>FRELON HD2k</stringValue>
+<type>
+<searchId>ParameterType [name = 'cameraName']</searchId>
+</type>
+<investigation>
+<id xmlns:java="java">-1</id>
+</investigation>
+</investigationParameter>
+                <datasetParameter>
+<stringValue>H=1, V=1</stringValue>
+<type>
+<searchId>ParameterType [name = 'cameraBinning']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                <datasetParameter>
+<numericValue>15</numericValue>
+<type>
+<searchId>ParameterType [name = 'cameraFibers']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                <datasetParameter>
+<numericValue>5.02</numericValue>
+<type>
+<searchId>ParameterType [name = 'pixelSize']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                <datasetParameter>
+<stringValue>FTM</stringValue>
+<type>
+<searchId>ParameterType [name = 'ccdMode']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                
+                        <datasetParameter>
+<numericValue>0</numericValue>
+<type>
+<searchId>ParameterType [name = 'projectionSize_ROW_BEG']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>1023</numericValue>
+<type>
+<searchId>ParameterType [name = 'projectionSize_ROW_END']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>0</numericValue>
+<type>
+<searchId>ParameterType [name = 'projectionSize_COL_BEG']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>2047</numericValue>
+<type>
+<searchId>ParameterType [name = 'projectionSize_COL_END']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>2048</numericValue>
+<type>
+<searchId>ParameterType [name = 'projectionSize_DIM_1']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>1024</numericValue>
+<type>
+<searchId>ParameterType [name = 'projectionSize_DIM_2']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                
+                
+                        <datasetParameter>
+<numericValue>4.4</numericValue>
+<type>
+<searchId>ParameterType [name = 'slit_PS_HG']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+<datasetParameter>
+<numericValue>3.42313</numericValue>
+<type>
+<searchId>ParameterType [name = 'slit_PS_VG']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+<datasetParameter>
+<numericValue>0.12</numericValue>
+<type>
+<searchId>ParameterType [name = 'slit_PS_HO']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+<datasetParameter>
+<numericValue>0.480625</numericValue>
+<type>
+<searchId>ParameterType [name = 'slit_PS_VO']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+<datasetParameter>
+<numericValue>2.19219</numericValue>
+<type>
+<searchId>ParameterType [name = 'slit_PS_UP']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+<datasetParameter>
+<numericValue>1.23094</numericValue>
+<type>
+<searchId>ParameterType [name = 'slit_PS_DOWN']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+<datasetParameter>
+<numericValue>2.32</numericValue>
+<type>
+<searchId>ParameterType [name = 'slit_PS_FRONT']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+<datasetParameter>
+<numericValue>2.08</numericValue>
+<type>
+<searchId>ParameterType [name = 'slit_PS_BACK']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>10</numericValue>
+<type>
+<searchId>ParameterType [name = 'slit_SS_HG']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+<datasetParameter>
+<numericValue>5</numericValue>
+<type>
+<searchId>ParameterType [name = 'slit_SS_VG']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+<datasetParameter>
+<numericValue>0.116875</numericValue>
+<type>
+<searchId>ParameterType [name = 'slit_SS_HO']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+<datasetParameter>
+<numericValue>0</numericValue>
+<type>
+<searchId>ParameterType [name = 'slit_SS_VO']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+<datasetParameter>
+<numericValue>2.5</numericValue>
+<type>
+<searchId>ParameterType [name = 'slit_SS_UP']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+<datasetParameter>
+<numericValue>2.5</numericValue>
+<type>
+<searchId>ParameterType [name = 'slit_SS_DOWN']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+<datasetParameter>
+<numericValue>5.11688</numericValue>
+<type>
+<searchId>ParameterType [name = 'slit_SS_FRONT']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+<datasetParameter>
+<numericValue>4.88312</numericValue>
+<type>
+<searchId>ParameterType [name = 'slit_SS_BACK']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>9.999</numericValue>
+<type>
+<searchId>ParameterType [name = 'slit_BS_HG']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+<datasetParameter>
+<numericValue>10</numericValue>
+<type>
+<searchId>ParameterType [name = 'slit_BS_VG']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+<datasetParameter>
+<numericValue>-5.822</numericValue>
+<type>
+<searchId>ParameterType [name = 'slit_BS_HO']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+<datasetParameter>
+<numericValue>6.255</numericValue>
+<type>
+<searchId>ParameterType [name = 'slit_BS_VO']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+<datasetParameter>
+<numericValue>11.2553</numericValue>
+<type>
+<searchId>ParameterType [name = 'slit_BS_UP']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+<datasetParameter>
+<numericValue>-1.25522</numericValue>
+<type>
+<searchId>ParameterType [name = 'slit_BS_DOWN']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+<datasetParameter>
+<numericValue>-0.8224</numericValue>
+<type>
+<searchId>ParameterType [name = 'slit_BS_FRONT']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+<datasetParameter>
+<numericValue>10.8216</numericValue>
+<type>
+<searchId>ParameterType [name = 'slit_BS_BACK']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                
+                
+                        <datasetParameter>
+<numericValue>0</numericValue>
+<type>
+<searchId>ParameterType [name = 'motor_rien']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>0</numericValue>
+<type>
+<searchId>ParameterType [name = 'motor_srot']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>4.5</numericValue>
+<type>
+<searchId>ParameterType [name = 'motor_yrot']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>-154.842</numericValue>
+<type>
+<searchId>ParameterType [name = 'motor_sz']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>4.05</numericValue>
+<type>
+<searchId>ParameterType [name = 'motor_sx']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>4.39875</numericValue>
+<type>
+<searchId>ParameterType [name = 'motor_sy']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>1000</numericValue>
+<type>
+<searchId>ParameterType [name = 'motor_xc']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>342.83</numericValue>
+<type>
+<searchId>ParameterType [name = 'motor_yc']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>18.4815</numericValue>
+<type>
+<searchId>ParameterType [name = 'motor_zc1']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>-233.332</numericValue>
+<type>
+<searchId>ParameterType [name = 'motor_m1focus']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>-0.959269</numericValue>
+<type>
+<searchId>ParameterType [name = 'motor_m1rotc']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>0</numericValue>
+<type>
+<searchId>ParameterType [name = 'motor_euro1']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>888.695</numericValue>
+<type>
+<searchId>ParameterType [name = 'motor_cmx']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>58.2393</numericValue>
+<type>
+<searchId>ParameterType [name = 'motor_cmz']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>2</numericValue>
+<type>
+<searchId>ParameterType [name = 'motor_pz1']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>6.43998</numericValue>
+<type>
+<searchId>ParameterType [name = 'motor_r1']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>0.37</numericValue>
+<type>
+<searchId>ParameterType [name = 'motor_zfourmr']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>60</numericValue>
+<type>
+<searchId>ParameterType [name = 'motor_simap']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>1.97073</numericValue>
+<type>
+<searchId>ParameterType [name = 'motor_zc2']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>2</numericValue>
+<type>
+<searchId>ParameterType [name = 'motor_urev']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>60.001</numericValue>
+<type>
+<searchId>ParameterType [name = 'motor_gu32u']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>265.277</numericValue>
+<type>
+<searchId>ParameterType [name = 'motor_gw150m']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                        <datasetParameter>
+<numericValue>11.5</numericValue>
+<type>
+<searchId>ParameterType [name = 'motor_gu32d']</searchId>
+</type>
+<dataset>
+<id xmlns:java="java">-2</id>
+</dataset>
+</datasetParameter>
+                
+                
+        
+ <datafile><datafileCreateTime>2012-11-16T08:52:56</datafileCreateTime><fileSize>4195328</fileSize><name>quali_0000.edf</name><location>/data/visitor/ec1021/id19/HA_5.06_Al2_Cu0.5_U176-11.5_rhynie-chert_RC15_xc1000_</location><datafileFormat><id>-3</id></datafileFormat><dataset><id>-2</id></dataset></datafile><datafile><datafileCreateTime>2012-11-16T08:54:02</datafileCreateTime><fileSize>4195328</fileSize><name>HA_5.06_Al2_Cu0.5_U176-11.5_rhynie-chert_RC15_xc1000_0000.edf</name><location>/data/visitor/ec1021/id19/HA_5.06_Al2_Cu0.5_U176-11.5_rhynie-chert_RC15_xc1000_</location><datafileFormat><id>-3</id></datafileFormat><dataset><id>-2</id></dataset></datafile><datafile><datafileCreateTime>2012-11-16T08:54:02</datafileCreateTime><fileSize>4195328</fileSize><name>HA_5.06_Al2_Cu0.5_U176-11.5_rhynie-chert_RC15_xc1000_0001.edf</name><location>/data/visitor/ec1021/id19/HA_5.06_Al2_Cu0.5_U176-11.5_rhynie-chert_RC15_xc1000_</location><datafileFormat><id>-3</id></datafileFormat><dataset><id>-2</id></dataset></datafile><datafile><datafileCreateTime>2012-11-16T08:54:02</datafileCreateTime><fileSize>4195328</fileSize><name>HA_5.06_Al2_Cu0.5_U176-11.5_rhynie-chert_RC15_xc1000_0002.edf</name><location>/data/visitor/ec1021/id19/HA_5.06_Al2_Cu0.5_U176-11.5_rhynie-chert_RC15_xc1000_</location><datafileFormat><id>-3</id></datafileFormat><dataset><id>-2</id></dataset></datafile><datafile><datafileCreateTime>2012-11-16T08:54:02</datafileCreateTime><fileSize>4195328</fileSize><name>HA_5.06_Al2_Cu0.5_U176-11.5_rhynie-chert_RC15_xc1000_0003.edf</name><location>/data/visitor/ec1021/id19/HA_5.06_Al2_Cu0.5_U176-11.5_rhynie-chert_RC15_xc1000_</location><datafileFormat><id>-3</id></datafileFormat><dataset><id>-2</id></dataset></datafile><datafile><datafileCreateTime>2012-11-16T08:54:03</datafileCreateTime><fileSize>4195328</fileSize><name>HA_5.06_Al2_Cu0.5_U176-11.5_rhynie-chert_RC15_xc1000_0004.edf</name><location>/data/visitor/ec1021/id19/HA_5.06_Al2_Cu0.5_U176-11.5_rhynie-chert_RC15_xc1000_</location><datafileFormat><id>-3</id></datafileFormat><dataset><id>-2</id></dataset></datafile><datafile><datafileCreateTime>2012-11-16T08:54:03</datafileCreateTime><fileSize>4195328</fileSize><name>HA_5.06_Al2_Cu0.5_U176-11.5_rhynie-chert_RC15_xc1000_0005.edf</name><location>/data/visitor/ec1021/id19/HA_5.06_Al2_Cu0.5_U176-11.5_rhynie-chert_RC15_xc1000_</location><datafileFormat><id>-3</id></datafileFormat><dataset><id>-2</id></dataset></datafile><datafile><datafileCreateTime>2012-11-16T08:54:03</datafileCreateTime><fileSize>4195328</fileSize><name>HA_5.06_Al2_Cu0.5_U176-11.5_rhynie-chert_RC15_xc1000_0006.edf</name><location>/data/visitor/ec1021/id19/HA_5.06_Al2_Cu0.5_U176-11.5_rhynie-chert_RC15_xc1000_</location><datafileFormat><id>-3</id></datafileFormat><dataset><id>-2</id></dataset></datafile><datafile><datafileCreateTime>2012-11-16T08:54:03</datafileCreateTime><fileSize>4195328</fileSize><name>HA_5.06_Al2_Cu0.5_U176-11.5_rhynie-chert_RC15_xc1000_0007.edf</name><location>/data/visitor/ec1021/id19/HA_5.06_Al2_Cu0.5_U176-11.5_rhynie-chert_RC15_xc1000_</location><datafileFormat><id>-3</id></datafileFormat><dataset><id>-2</id></dataset></datafile></icatdata>
