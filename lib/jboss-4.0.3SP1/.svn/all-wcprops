@@ -1,0 +1,491 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1
+END
+jacorb.jar
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jacorb.jar
+END
+jboss.jar
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jboss.jar
+END
+commons-httpclient.jar
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/commons-httpclient.jar
+END
+jboss-jaxrpc.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jboss-jaxrpc.jar
+END
+namespace.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/namespace.jar
+END
+jboss-hibernate.jar
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jboss-hibernate.jar
+END
+jboss-j2ee.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jboss-j2ee.jar
+END
+bsh-1.3.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/bsh-1.3.0.jar
+END
+log4j-boot.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/log4j-boot.jar
+END
+jboss-system.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jboss-system.jar
+END
+jboss-jsr77-client.jar
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jboss-jsr77-client.jar
+END
+autonumber-plugin.jar
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/autonumber-plugin.jar
+END
+jboss-transaction.jar
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jboss-transaction.jar
+END
+javax.servlet.jar
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/javax.servlet.jar
+END
+jboss-common-jdbc-wrapper.jar
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jboss-common-jdbc-wrapper.jar
+END
+jnpserver.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jnpserver.jar
+END
+jboss-jsr77.jar
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jboss-jsr77.jar
+END
+jboss-common-client.jar
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jboss-common-client.jar
+END
+dom4j.jar
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/dom4j.jar
+END
+jbossjmx-ant.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jbossjmx-ant.jar
+END
+jboss-management.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jboss-management.jar
+END
+log4j.jar
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/log4j.jar
+END
+commons-logging.jar
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/commons-logging.jar
+END
+jboss-deployment.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jboss-deployment.jar
+END
+asm.jar
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/asm.jar
+END
+jbosssx.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jbosssx.jar
+END
+auth.conf
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/auth.conf
+END
+jboss-monitoring.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jboss-monitoring.jar
+END
+jmx-invoker-adaptor-client.jar
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jmx-invoker-adaptor-client.jar
+END
+scout.jar
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/scout.jar
+END
+jboss-client.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jboss-client.jar
+END
+jmx-client.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jmx-client.jar
+END
+scheduler-plugin.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/scheduler-plugin.jar
+END
+mail-plugin.jar
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/mail-plugin.jar
+END
+jpl-util.jar
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jpl-util.jar
+END
+commons-discovery.jar
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/commons-discovery.jar
+END
+jnp-client.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jnp-client.jar
+END
+jboss-aop-jdk50-client.jar
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jboss-aop-jdk50-client.jar
+END
+properties-plugin.jar
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/properties-plugin.jar
+END
+jbossall-client.jar
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jbossall-client.jar
+END
+bindingservice-plugin.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/bindingservice-plugin.jar
+END
+logkit.jar
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/logkit.jar
+END
+jboss-jsr88.jar
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jboss-jsr88.jar
+END
+activation.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/activation.jar
+END
+jbossall-client-mis.jar
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jbossall-client-mis.jar
+END
+wsdl4j.jar
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/wsdl4j.jar
+END
+cglib-2.1_2jboss.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/cglib-2.1_2jboss.jar
+END
+jbossmq-client.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jbossmq-client.jar
+END
+getopt.jar
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/getopt.jar
+END
+xmlentitymgr.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/xmlentitymgr.jar
+END
+jboss-jmx.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jboss-jmx.jar
+END
+webdavlib.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/webdavlib.jar
+END
+jboss-common.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jboss-common.jar
+END
+jboss-iiop-client.jar
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jboss-iiop-client.jar
+END
+scheduler-plugin-example.jar
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/scheduler-plugin-example.jar
+END
+bcel.jar
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/bcel.jar
+END
+jbossha-client.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jbossha-client.jar
+END
+jpl-pattern.jar
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jpl-pattern.jar
+END
+bsh-deployer.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/bsh-deployer.jar
+END
+jbosscx-client.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jbosscx-client.jar
+END
+jboss-saaj.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jboss-saaj.jar
+END
+commons-collections.jar
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/commons-collections.jar
+END
+avalon-framework.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/avalon-framework.jar
+END
+jboss-net-client.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jboss-net-client.jar
+END
+jboss-system-client.jar
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jboss-system-client.jar
+END
+jmx-adaptor-plugin.jar
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jmx-adaptor-plugin.jar
+END
+juddisaaj.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/juddisaaj.jar
+END
+bsf.jar
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/bsf.jar
+END
+mail.jar
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/mail.jar
+END
+concurrent.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/concurrent.jar
+END
+jboss-remoting.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jboss-remoting.jar
+END
+jbossmq.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jbossmq.jar
+END
+jbosssx-client.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jbosssx-client.jar
+END
+snmp-support.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/snmp-support.jar
+END
+javax.servlet.jsp.jar
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/javax.servlet.jsp.jar
+END
+gnu-regexp.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/gnu-regexp.jar
+END
+axis-ws4ee.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/axis-ws4ee.jar
+END
+antlr-2.7.5H3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/antlr-2.7.5H3.jar
+END
+asm-attrs.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/asm-attrs.jar
+END
+jboss-transaction-client.jar
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jboss-transaction-client.jar
+END
+jboss-jca.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/esrf-mis-tools/!svn/ver/2/MIS/lib/jboss-4.0.3SP1/jboss-jca.jar
+END
