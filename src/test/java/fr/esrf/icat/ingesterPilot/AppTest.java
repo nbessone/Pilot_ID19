@@ -44,11 +44,13 @@ public class AppTest {
 
 	private static final Logger log = Logger.getLogger(IcatPilotIngester.class
 			.getName());
+	static String rootDirectory = "/users/bessone/git/Pilot_ID19/";
 
 	/**
 	 * Test the data format conversion from the form "1111-11-22T10:20:30" to
 	 * "1111/11/22T10:20:30"
 	 */
+	@Ignore
 	@Test
 	public void testFormatDate() {
 
@@ -59,6 +61,7 @@ public class AppTest {
 	/**
 	 * Test the correctness of the investigation name format standard.
 	 */
+	@Ignore
 	@Test
 	public void proposalNameFormatTest() {
 		assertEquals("MX410 ID11 10-10-2006/11-10-2006",
@@ -71,6 +74,7 @@ public class AppTest {
 	 * Test the transformation of a tomoDb xml file in an Icat compatible xml
 	 * file
 	 */
+	@Ignore
 	@Test
 	public void testTransformTomoToIcatXml() {
 
@@ -85,46 +89,44 @@ public class AppTest {
 		// TomoDBtoICAT.trasformTomo_in_ICAT(inXSL, inXML, outTXT);
 	}
 
+	@Ignore
 	@Test
 	public void copyDirectoryTest() throws IOException {
 
-		/*
-		 * File source = new File(
-		 * "\\\\gy\\visitor\\si2539\\id13\\PROCESS\\SESSION2\\tmp-volatile-tmp\\out_0108.edf"
-		 * ); File target = new File(
-		 * "C:\\Users\\bessone.ESRF\\git\\Pilot_ReplaceTomoDB\\ingesterPilot\\resources\\out_0108.edf"
-		 * );
-		 * 
-		 * InputStream in = new FileInputStream(source); OutputStream out = new
-		 * FileOutputStream(target);
-		 * 
-		 * // Transfer bytes from in to out byte[] buf = new byte[1024]; int
-		 * len; while ((len = in.read(buf)) > 0) { out.write(buf, 0, len); }
-		 * in.close(); out.close();
-		 */
+		
+		  File source = new File(
+		  "\\\\gy\\visitor\\si2539\\id13\\PROCESS\\SESSION2\\tmp-volatile-tmp\\out_0108.edf"
+		  ); File target = new File(
+		  "C:\\Users\\bessone.ESRF\\git\\Pilot_ReplaceTomoDB\\ingesterPilot\\resources\\out_0108.edf"
+		  );
+		  
+		  InputStream in = new FileInputStream(source); OutputStream out = new
+		  FileOutputStream(target);
+		  
+		  // Transfer bytes from in to out 
+		  byte[] buf = new byte[1024]; 
+		  int len; 
+		  while ((len = in.read(buf)) > 0) { out.write(buf, 0, len); }
+		  in.close(); out.close();
+		 
 	}
 
 	/**
 	 * Remove all data from the Icat DB and import the ID19 parameter types.
 	 */
+	@Ignore
 	@Test
-	public void importTest() {
+	public void empty_and_reinit_ICAT_DB() {
 		String filename =
-		// "C:\\Users\\bessone.ESRF\\git\\Pilot_ReplaceTomoDB\\ingesterPilot\\src\\test\\java\\resouces\\import-icat.xml";
-
 		// Clean ALL data in the DG except Facility
-		"C:\\Users\\bessone.ESRF\\git\\Pilot_ReplaceTomoDB\\ingesterPilot\\resources\\clean.xml";
+		rootDirectory+"resources"+File.separatorChar+"clean.xml";
 		try {
-			 //IcatPilotIngester.importXmlFile(filename);
+			 IcatPilotIngester.importXmlFile(filename);
 
 			// Import all ParameterType relative to ID19
-			filename = "C:\\Users\\bessone.ESRF\\git\\Pilot_ReplaceTomoDB\\ingesterPilot\\resources\\ParamTypeID19.xml";
-			// IcatPilotIngester.importXmlFile(filename);
+			filename = rootDirectory+"resources"+File.separatorChar+"ParamTypeID19.xml";
+			 IcatPilotIngester.importXmlFile(filename);
 
-			// Import all metadata of the TomoDB modified xml file
-			// "C:\\Users\\bessone.ESRF\\git\\Pilot_ReplaceTomoDB\\ingesterPilot\\resources\\tomoTest.xml";
-
-			// IcatPilotIngester.importXmlFile(filename);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -161,6 +163,7 @@ public class AppTest {
 	 * Read the content of a remote folder (only .edf file) and append the the
 	 * relative data formatted as Icat xml to the file to import.
 	 */
+	@Ignore
 	@Test
 	public void readRemoteFolderContentTest() {
 
@@ -254,7 +257,26 @@ public class AppTest {
 		} catch (IOException e1) { // TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-
 	}
+	
+	
+	/**
+	 * Retrieve the Experiment perfomed ona specific Beamline in a certan period of time 
+	 */
+	@Test
+	public void getLatestInvestigationsTest() {
+		
+		
+		SmisUtils.getInvestigationFromSmisByBeamlinaAndDate("ID19", "2013/04/22T00:00:00", "2013/04/30T00:00:00");
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
 
 }

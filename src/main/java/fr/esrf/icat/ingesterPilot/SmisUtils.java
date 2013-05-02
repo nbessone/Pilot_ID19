@@ -1,8 +1,11 @@
 package fr.esrf.icat.ingesterPilot;
 
+import java.io.File;
+import java.io.FilenameFilter;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.rmi.RemoteException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -17,6 +20,7 @@ import javax.ejb.TransactionRolledbackLocalException;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
+import javax.xml.rpc.ServiceException;
 
 import jmis1.jboss_net.services.SMISWebService.SMISWebServiceLocalServiceLocator;
 import jmis1.jboss_net.services.SMISWebService.SMISWebServiceSoapBindingStub;
@@ -99,7 +103,7 @@ public class SmisUtils {
 					
 					icat = IcatSession.getIcat();
 					sessionId = IcatSession.getSession();
-				} catch (MalformedURLException | IcatException_Exception e) {
+				} catch ( IcatException_Exception e) {
 					logger.error("Impossible connnect to Icat: " + e.getMessage());
 					throw e;
 				}
@@ -345,6 +349,156 @@ public class SmisUtils {
 	//===========================================================================================
 	//   Utility functions
 	//===========================================================================================
+	
+	/**
+	 * Get the list of experiments performed in a certain Beamline in a specified perid of time.
+	 * @param instrument
+	 * @param dateFrom
+	 * @param dateTo
+	 */
+	public static void getInvestigationFromSmisByBeamlinaAndDate(
+			String instrument, String dateFrom, String dateTo) {
+		SMISWebServiceSoapBindingStub stub = null;
+		try {
+			stub = SmisSession.getStub();
+		} catch (ServiceException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		ExpSessionInfoLightVO[] sessions = null;
+		try {
+			sessions = stub.findSessionsByBeamlineAndDates(instrument,
+					toCalendar(dateFrom), toCalendar(dateTo));
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		for (ExpSessionInfoLightVO s : sessions) {
+			System.out.println("Neme: " + s.getName() + ", "
+					+ s.getBeamlineName());
+
+			// ===========================================================================
+
+			String rootDirectory = "/data/";// \\gy\visitor\
+
+			if (!s.getCategCode().equals("in")) {// exclude all INDUSTRIAL
+													// proposals
+
+				rootDirectory = rootDirectory.concat(File.separatorChar + s.getCategCode().toLowerCase()
+						+ s.getCategCounter());
+
+				File file = new File(rootDirectory); // === ProposalName
+														// directory ===
+				String[] directory = file.list(new FilenameFilter() {
+					@Override
+					public boolean accept(File dir, String name) {
+						return new File(dir, name).exists();
+					}
+				});
+
+				String s1;
+
+				// Loop over ALL proposals in /data/visitor/
+				// for (int i = 0; i < directories.length; i++) {
+				if (directory != null) {
+
+					s1 = directory[0];
+					String beamlinePath = rootDirectory + s1;
+					File dir = new File(beamlinePath); // === BeamlineName
+														// directory ===
+					FilenameFilter textFilter = new FilenameFilter() {
+						// Select only folder named: id19, id11 or id22
+						public boolean accept(File dir, String name) {
+							String lowercaseName = name.toLowerCase();
+							if (lowercaseName.startsWith("id19")
+									|| lowercaseName.startsWith("id11")
+									|| lowercaseName.startsWith("id22")
+							// || lowercaseName.startsWith("id17-")
+							) {
+								return true;
+							} else {
+								return false;
+							}
+						}
+					};
+					String[] list = dir.list(textFilter);
+
+					// Loop over all beamlines sub-directory listed in the
+					// "filenamefilter"
+					for (int n = 0; list != null && n < list.length; n++) {
+
+						String s2 = list[n];
+
+						String dataSetPath = beamlinePath + File.separatorChar
+								+ s2;
+
+						File file2 = new File(dataSetPath); // === DatasetName
+						// directory ===
+						String[] directories2 = file2
+								.list(new FilenameFilter() {
+									@Override
+									public boolean accept(File dir, String name) {
+										return new File(dir, name)
+												.isDirectory();
+									}
+								});
+
+						int count = 0; // DEBUG
+
+						for (int j = 0; j < directories2.length && count < 5; j++) {// DEBUG
+
+							final String s3 = directories2[j];
+
+							String tomoDB_filePath = dataSetPath
+									+ File.separatorChar + s3;
+
+							// === Search for TomoDB_fileName ===
+							File file3 = new File(tomoDB_filePath);
+
+							FilenameFilter filter = new FilenameFilter() {
+								// select only file with a specific name
+								public boolean accept(File dir, String name) {
+									if (name.contains(s3 + ".xml")) {
+										return true;
+									} else {
+										return false;
+									}
+								}
+							};
+
+							File[] directories3 = file3.listFiles(filter);
+
+							if (directories3 != null && directories3.length > 0) {
+
+								try {
+									count++;
+
+									// System.out.println(tomoDB_filePath +
+									// File.separatorChar + s3 + ".xml");
+
+									// run(tomoDB_filePath + File.separatorChar
+									// + s3 + ".xml");
+
+								} catch (Exception e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+									logger.error(e.getMessage());
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+			// =============================================================================
+		}
+	}
 	
 	/**
 	 * 

@@ -1,6 +1,5 @@
 package fr.esrf.icat.ingesterPilot;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -8,7 +7,6 @@ import java.io.FileOutputStream;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.RandomAccessFile;
 import java.text.DateFormat;
@@ -34,6 +32,8 @@ public class IcatPilotIngester {
 	/**
 	 * @param args
 	 */
+	static String rootDirectory = "/data/";// \\gy\visitor\
+
 	static String proposalName;
 	static Map<String, String> map = new HashMap<String, String>();
 	static Long icatInvestigationID = (long) 0;
@@ -41,8 +41,10 @@ public class IcatPilotIngester {
 			.getLogger(IcatPilotIngester.class.getName());
 
 	public static void main(String[] args) {
-		String filepath = "\\\\gy\\visitor\\ma1145\\id19\\freeDM_A_\\freeDM_A_.xml";
-		// \\gy\visitor\ma1145\id19\freeDM_A_\freeDM_A_.xml
+		String filepath = rootDirectory + "ma1145" + File.separatorChar
+				+ "id19" + File.separatorChar + "freeDM_A_"
+				+ File.separatorChar + "freeDM_A_.xml";
+
 		try {
 			// run(filepath);
 			testAllRun();
@@ -57,13 +59,10 @@ public class IcatPilotIngester {
 	// =======================================================================================================================
 	public static void testRun() throws Exception {
 
-		String rootDirectory = "\\\\gy\\visitor\\";
-
 		// - get proposalName 'XXXXX'
 		String proposalName = "ma1281";
-
-		// - get folders (experiments) in \\gy\visitor\XXXXX\id19\
-		String studyRootDir = rootDirectory + proposalName + "\\id19\\";
+		String studyRootDir = rootDirectory + proposalName + File.separatorChar
+				+ "id19" + File.separatorChar;
 
 		File dir = new File(studyRootDir);
 		File[] folderList = dir.listFiles();
@@ -73,7 +72,7 @@ public class IcatPilotIngester {
 
 			// - - Folder contains TomoDB XML file?
 			String investigationDir = studyRootDir + folderList[i].getName()
-					+ "\\";
+					+ File.separatorChar;
 			String fileName = folderList[i].getName() + ".xml";
 
 			File f = new File(investigationDir + fileName);
@@ -100,110 +99,118 @@ public class IcatPilotIngester {
 	}
 
 	/**
-	 * Scan all folders in //gy/visitor/ find all containing a folder "id19" and
-	 * search if it contain datasets with TomoDB xml file.
+	 * Scan all folders in "data/visitor" find all containing a folder
+	 * id19,Id11,Id22 and search if it contain datasets with TomoDB xml file.
 	 * 
 	 * @throws Exception
 	 */
 	public static void testAllRun() throws Exception {
 
-		// Search for all directory in \\gy\visitor\ containing ID19
-		// experiments.
-		// On each ID19 subFolder (dataSet) search if exist a TomoDB xml file.
-		// if so, run the importation on that dataSet.
-		Process p = null;
-		String remoteDir = "\\\\gy\\visitor\\";
-		String command = "cmd  /c dir " + remoteDir + " /AD /ON /B";
+		/*
+		 * LINUX: mount the visitor disk, $ su - $ mkdir -p /visitor/ $ mount
+		 * gy.esrf.fr:/data/visitor /visitor/
+		 */
 
-		try {
-			p = Runtime.getRuntime().exec(command);
-		} catch (IOException e) {
-			logger.error("Impossible run command: '" + command
-					+ "' at remote location: '" + remoteDir + "'. "
-					+ e.getMessage());
-		}
+		File file = new File(rootDirectory); // === ProposalName directory ===
+		String[] directories = file.list(new FilenameFilter() {
+			@Override
+			public boolean accept(File dir, String name) {
+				return new File(dir, name).isDirectory();
+			}
+		});
 
-		BufferedReader stdInput = new BufferedReader(new InputStreamReader(
-				p.getInputStream()));
+		String s1;
 
-		try {
-			String s1;
-			while ((s1 = stdInput.readLine()) != null) { // proposal level
+		// Loop over ALL proposals in /data/visitor/
+		for (int i = 0; i < directories.length; i++) {
+			s1 = directories[i];
 
-				if (!s1.contains("in")) { // exclude all INDUSTRIAL proposals
+			if (!s1.contains("in")) { // exclude all INDUSTRIAL proposals
 
-					String path1 = remoteDir + s1;
-					File dir = new File(path1);
-					FilenameFilter textFilter = new FilenameFilter() {
-						public boolean accept(File dir, String name) {
-							String lowercaseName = name.toLowerCase();
-							if (lowercaseName.startsWith("id19")
-									|| lowercaseName.startsWith("id11")
-									|| lowercaseName.startsWith("id22")
-									//|| lowercaseName.startsWith("id17-")
-									) {
-								return true;
-							} else {
-								return false;
-							}
+				String beamlinePath = rootDirectory + s1;
+				File dir = new File(beamlinePath); // === BeamlineName directory ===
+				FilenameFilter textFilter = new FilenameFilter() {
+					// Select only folder named: id19, id11 or id22
+					public boolean accept(File dir, String name) {
+						String lowercaseName = name.toLowerCase();
+						if (lowercaseName.startsWith("id19")
+								|| lowercaseName.startsWith("id11")
+								|| lowercaseName.startsWith("id22")
+						// || lowercaseName.startsWith("id17-")
+						) {
+							return true;
+						} else {
+							return false;
 						}
-					};
-					String[] list = dir.list(textFilter);
+					}
+				};
+				String[] list = dir.list(textFilter);
 
-					for (int n = 0; n < list.length; n++) {
-						String s2 = list[n];
+				// Loop over all beamlines sub-directory listed in the "filenamefilter"
+				for (int n = 0; list != null && n < list.length; n++) {
+					
+					String s2 = list[n];
 
-						String path2 = path1 + File.separatorChar + s2;
-						// System.out.println(path2);
-						String command2 = "cmd  /c dir " + path2 + " /AD /B";
-						Process p2 = null;
+					String dataSetPath = beamlinePath + File.separatorChar + s2;
 
-						p2 = Runtime.getRuntime().exec(command2);
-						BufferedReader stdInput2 = new BufferedReader(
-								new InputStreamReader(p2.getInputStream()));
-
-						String s3 = null;
-						int count = 0;
-						// TEST - Ingest only 'X' dataset per investigation
-						while ((s3 = stdInput2.readLine()) != null && count < 5) {// DataSet level
-
-							String path3 = path2 + File.separatorChar + s3;
-							String command3 = "cmd  /c dir " + path3
-									+ " /A-D /B *.xml";
-
-							Process p3 = Runtime.getRuntime().exec(command3);
-							BufferedReader stdInput3 = new BufferedReader(
-									new InputStreamReader(p3.getInputStream()));
-
-							String s4 = null;
-							while ((s4 = stdInput3.readLine()) != null
-									&& count < 5) {
-
-								if (s4.contains(s3 + ".xml")) {
-									try {
-										count++;
-
-										run(path3 + File.separatorChar + s4);
-
-									} catch (Exception e) {
-										// TODO Auto-generated catch block
-										e.printStackTrace();
-										logger.error(e.getMessage());
-									}
+					File file2 = new File(dataSetPath); // === DatasetName
+														// directory ===
+					String[] directories2 = file2
+							.list(new FilenameFilter() {
+								@Override
+								public boolean accept(File dir, String name) {
+									return new File(dir, name)
+											.isDirectory();
 								}
+							});
 
+					int count = 0; // DEBUG
+
+					for (int j = 0; j < directories2.length && count < 5; j++) {// DEBUG
+						
+						final String s3 = directories2[j];
+
+						String tomoDB_filePath = dataSetPath
+								+ File.separatorChar + s3;
+
+						// === Search for TomoDB_fileName ===
+						File file3 = new File(tomoDB_filePath); 
+
+						FilenameFilter filter = new FilenameFilter() {
+							// select only file with a specific name
+							public boolean accept(File dir, String name) {
+								if (name.contains(s3 + ".xml")) {
+									return true;
+								} else {
+									return false;
+								}
 							}
+						};
+						
+						File[] directories3 = file3.listFiles(filter);
+						
+						if (directories3 != null && directories3.length > 0) {
 
-							// }
+							try {
+								count++;
+								
+								//System.out.println(tomoDB_filePath + File.separatorChar + s3 + ".xml");
+								
+								run(tomoDB_filePath + File.separatorChar + s3 + ".xml");
 
+							} catch (Exception e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+								logger.error(e.getMessage());
+							}
 						}
 					}
 				}
 			}
-			logger.info("FINISH - All ID19 proposal with investigations has been inported.... Maybe.....");
-		} catch (IOException e1) { // TODO Auto-generated catch block
-			e1.printStackTrace();
 		}
+
+		
+		logger.info("FINISH - All ID19 proposal with investigations has been inported.... Maybe.....");
 
 	}
 
@@ -218,7 +225,7 @@ public class IcatPilotIngester {
 
 		String path = currentDir.concat(File.separatorChar + "resources"
 				+ File.separatorChar);
-		String inXML = path + "imput.xml"; // tomoDB_Catalogue.xml";
+		String tomoDB_XML = path + "imput.xml";
 		String inXSL = path + "tomoDB_to_Icat.xsl";
 		String outTXT = path + "tomoTest.xml";
 
@@ -226,7 +233,7 @@ public class IcatPilotIngester {
 		// ---------------------------------------------------------------------
 		// TODO
 		try {
-			copyFileFromTo(remoteFileName, inXML);
+			copyFileFromTo(remoteFileName, tomoDB_XML);
 		} catch (IOException e1) {
 			logger.error("Impossible access file: '" + remoteFileName + "'. "
 					+ e1.getMessage());
@@ -237,7 +244,7 @@ public class IcatPilotIngester {
 
 		// Transform the TomoDB file
 		// ---------------------------------------------------------------------
-		TomoDBtoICAT.trasformTomo_in_ICAT(inXSL, inXML, outTXT);
+		TomoDBtoICAT.trasformTomo_in_ICAT(inXSL, tomoDB_XML, outTXT);
 
 		// Extract from the converted file StudyName InstrumentName and date
 		// ---------------------------------------------------------------------
@@ -298,7 +305,7 @@ public class IcatPilotIngester {
 	// =======================================================================================================================
 	/**
 	 * From a specific path structure
-	 * (\\gy\visitor\<PROPOSALNAME>\<DATASETNAME>... extract the dataSet name
+	 * (\data\visitor\<PROPOSALNAME>\<DATASETNAME>... extract the dataSet name
 	 * 
 	 * @param remoteFileName
 	 * @return
@@ -306,25 +313,18 @@ public class IcatPilotIngester {
 	 */
 	private static String extractDataSetFromPath(String remoteFileName)
 			throws IOException {
-		// "\\gy\visitor\ma1145\id19\freeDM_A_\freeDM_A_.xml"
-		
+
 		String datsetName = null;
-		String headerPath = File.separatorChar + "" + File.separatorChar + "gy"
-				+ File.separatorChar + "visitor" + File.separatorChar; // "\\gy\visitor\"
+		String headerPath = rootDirectory;
+
 		if (remoteFileName.indexOf(headerPath) == 0) {
-			
-			int i = remoteFileName.indexOf(File.separatorChar, headerPath.length() )+ 1;
-			int j = remoteFileName.indexOf(File.separatorChar, i)+1;
-			i = remoteFileName.indexOf(File.separatorChar, j+2);
+
+			int i = remoteFileName.indexOf(File.separatorChar,
+					headerPath.length()) + 1;
+			int j = remoteFileName.indexOf(File.separatorChar, i) + 1;
+			i = remoteFileName.indexOf(File.separatorChar, j + 2);
 			datsetName = remoteFileName.substring(j, i);
-			
-			
-			/*String partialPath = File.separatorChar + "id19"
-					+ File.separatorChar;
-			datsetName = remoteFileName.substring(remoteFileName
-					.indexOf(partialPath) + partialPath.length());
-			datsetName = datsetName.substring(0,
-					datsetName.indexOf(File.separatorChar));*/
+
 		} else {
 			throw (new IOException("Unknown file path format. Expected: '"
 					+ headerPath + "' Received: " + remoteFileName));
@@ -337,7 +337,7 @@ public class IcatPilotIngester {
 	// =======================================================================================================================
 
 	/**
-	 * From a specific path structure (\\gy\visitor\<PROPOSALNAME>\... extract
+	 * From a specific path structure (\data\visitor\<PROPOSALNAME>\... extract
 	 * the proposal name
 	 * 
 	 * @param remoteFileName
@@ -348,8 +348,8 @@ public class IcatPilotIngester {
 			throws IOException {
 
 		String proposalName = null;
-		String headerPath = File.separatorChar + "" + File.separatorChar + "gy"
-				+ File.separatorChar + "visitor" + File.separatorChar; // "\\\\gy\\visitor\\"
+		String headerPath = rootDirectory;
+
 		if (remoteFileName.indexOf(headerPath) == 0) {
 			int proposalEndIndex = remoteFileName.indexOf(File.separatorChar,
 					headerPath.length());
@@ -440,8 +440,8 @@ public class IcatPilotIngester {
 	// =======================================================================================================================
 
 	/**
-	 * Search the FIRST occurrence of the specified String in a file, and
-	 * delete the entire line.
+	 * Search the FIRST occurrence of the specified String in a file, and delete
+	 * the entire line.
 	 * 
 	 * @param xmlFile
 	 * @param match
@@ -579,9 +579,10 @@ public class IcatPilotIngester {
 
 		IcatXmlTestClient xmlIngesterclient = null;
 		try {
-			xmlIngesterclient = IcatXmlTestClient.createInstance(IcatSession.ICAT_HOSTNAME+"/icat", 
-					IcatSession.ICAT_USERNAME, IcatSession.ICAT_PSW,  IcatSession.ICAT_SECURITY_PLUGIN);
-
+			xmlIngesterclient = IcatXmlTestClient.createInstance(
+					IcatSession.ICAT_HOSTNAME + "/icat",
+					IcatSession.ICAT_USERNAME, IcatSession.ICAT_PSW,
+					IcatSession.ICAT_SECURITY_PLUGIN);
 
 		} catch (Exception e) {
 			Exception ex = new Exception(
@@ -609,8 +610,8 @@ public class IcatPilotIngester {
 	 * @param xmlFile
 	 * @throws Exception
 	 */
-	public static void readRemoteFolder_FormatXML_AppendToFile(String remoteDir, File xmlFile)
-			throws Exception {
+	public static void readRemoteFolder_FormatXML_AppendToFile(
+			String remoteDir, File xmlFile) throws Exception {
 
 		File dir = new File(remoteDir);
 		File[] list = dir.listFiles();
@@ -624,8 +625,8 @@ public class IcatPilotIngester {
 			Element e0 = doc.createElement("icatdata");
 			doc.appendChild(e0);
 			// - Ingest only 10 dataFiles ! !
-			for (int i = 0; i < 10 && i <list.length; i++) {// <-- TEST ! !
-											
+			for (int i = 0; i < 10 && i < list.length; i++) {// <-- TEST ! !
+
 				String filename = list[i].getName();
 				long fileLenght = list[i].length();
 				// Mon May 06 21:14:12 CES 2012
@@ -651,7 +652,7 @@ public class IcatPilotIngester {
 
 					element = doc.createElement("location");
 					String pathLinux = remoteDir.replace("\\", "/");
-					pathLinux= pathLinux.replaceAll("gy", "data").substring(1);
+					pathLinux = pathLinux.replaceAll("gy", "data").substring(1);
 					element.setTextContent(pathLinux);
 					dataFile.appendChild(element);
 
@@ -684,8 +685,6 @@ public class IcatPilotIngester {
 			throw (ex);
 		}
 	}
-	
-	
 
 	// --------------------------------------------------------------------
 	/**
@@ -786,7 +785,6 @@ public class IcatPilotIngester {
 		return (xmlFormat);
 	} // printNode(Node)
 
-	
 	// --------------------------------------------------------------------
 	/**
 	 * Copy a file from a location to another

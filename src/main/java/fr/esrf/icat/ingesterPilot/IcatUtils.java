@@ -1,6 +1,5 @@
 package fr.esrf.icat.ingesterPilot;
 
-import java.awt.List;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import org.icatproject.Facility;

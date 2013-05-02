@@ -63,6 +63,8 @@ public class IcatSession {
 		e.setKey("password");
 		e.setValue(ICAT_PSW);
 		entries.add(e);
+		
+		System.out.println(icat.getApiVersion());
 
 		sessionId = icat.login(ICAT_SECURITY_PLUGIN, credentials);
 		logger.info("CONNECTED to Icat. Session id: " + sessionId);
