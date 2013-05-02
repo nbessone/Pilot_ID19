@@ -1,0 +1,4 @@
+
+[http]
+        proxy = http://proxy.esrf.fr:3128
+
