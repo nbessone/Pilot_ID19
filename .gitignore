@@ -1,6 +1,9 @@
 #java specific
 *.class
-target/classes/fr/esrf/icat/ingesterPilot/*.class
+
+
+## SVN files
+.svn*
 
 ## generic files to ignore
 *~
