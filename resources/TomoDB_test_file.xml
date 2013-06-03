@@ -1,0 +1,60 @@
+<tomodb2>
+        <acquisition>
+                <beamline>ID11</beamline>
+                <nameExp>id11</nameExp>
+                <scanName>Scan_highres_calib_</scanName>
+                <disk>/data/visitor/ma1592/id11</disk>
+                <date>2013-02-14T22:30:53</date>
+                <machineMode>0</machineMode>
+                <machineCurrentStart>0</machineCurrentStart>
+                <machineCurrentStop>0</machineCurrentStop>
+                <insertionDeviceName>N/A</insertionDeviceName>
+                <insertionDeviceGap>-1</insertionDeviceGap>
+                <filter>N/A</filter>
+                <monochromatorName>N/A</monochromatorName>
+                <energy>-1</energy>
+                <tomo_N>18</tomo_N>
+                <ref_On>18</ref_On>
+                <ref_N>11</ref_N>
+                <dark_N>21</dark_N>
+                <y_Step>2</y_Step>
+                <ccdtime>2</ccdtime>
+                <scanDuration>7.28915</scanDuration>
+                <distance>62.7</distance>
+                <sourceSampleDistance>145000</sourceSampleDistance>
+                <scanRange>360</scanRange>
+                <scanType>step_by_step</scanType>
+                <realFinalAngles>270.000457</realFinalAngles>
+                <opticsName>ManualPixelSize: pxsize 0.77 magn 18.1818</opticsName>
+                <scintillator>GGG_6um</scintillator>
+                <cameraName>FRELON 0</cameraName>
+                <cameraBinning>H=1, V=1</cameraBinning>
+                <cameraFibers>0</cameraFibers>
+                <pixelSize>0.77</pixelSize>
+                <ccdMode>FFM</ccdMode>
+                <projectionSize>
+                        <ROW_BEG>0</ROW_BEG>
+                        <ROW_END>2047</ROW_END>
+                        <COL_BEG>0</COL_BEG>
+                        <COL_END>2047</COL_END>
+                        <DIM_1>2048</DIM_1>
+                        <DIM_2>2048</DIM_2>
+                </projectionSize>
+                <listMotors>
+                        <motor>
+                                <motorName>nfdtx</motorName>
+                                <motorPosition unit="mm">62.7</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>d1ty</motorName>
+                                <motorPosition unit="mm">-3.5</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>d1tz</motorName>
+                                <motorPosition unit="mm">140.25</motorPosition>
+                        </motor>
+                </listMotors>
+                <ccdstatus>
+                </ccdstatus>
+        </acquisition>
+</tomodb2>
