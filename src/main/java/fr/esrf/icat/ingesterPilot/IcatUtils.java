@@ -39,7 +39,11 @@ public class IcatUtils {
 			try {
 				icat = IcatSession.getIcat();
 				sessionId = IcatSession.getSession();
-			} catch (IcatException_Exception | MalformedURLException e) {
+			} catch (IcatException_Exception e){
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			catch ( MalformedURLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
@@ -90,7 +94,11 @@ public class IcatUtils {
 
 			return perfomIcatExistQuery(query);
 			
-		} catch (IcatException_Exception | MalformedURLException e) {
+		} catch (IcatException_Exception e){
+			IOException ex = new IOException("Unable to check if Study '"+studyName+"' exists in ICAT "+ e.getMessage());
+			throw ex;
+		}
+		catch ( MalformedURLException e) {
 			IOException ex = new IOException("Unable to check if Study '"+studyName+"' exists in ICAT "+ e.getMessage());
 			throw ex;
 		}
@@ -113,7 +121,10 @@ public class IcatUtils {
 
 			return perfomIcatExistQuery(query);
 			
-		} catch (IcatException_Exception | MalformedURLException e) {
+		} catch (IcatException_Exception  e) {
+			IOException ex = new IOException("Unable to check if User '"+userName+" - "+ userSurname+"' exists in ICAT "+ e.getMessage());
+			throw ex;
+		} catch (MalformedURLException e) {
 			IOException ex = new IOException("Unable to check if User '"+userName+" - "+ userSurname+"' exists in ICAT "+ e.getMessage());
 			throw ex;
 		}
@@ -136,7 +147,10 @@ public class IcatUtils {
 
 			return perfomIcatExistQuery(query);
 			
-		} catch (IcatException_Exception | MalformedURLException e) {
+		} catch (IcatException_Exception e) {
+			IOException ex = new IOException("Unable to check if InvestigationUser '"+userId+" - "+ invId+"' exists in ICAT "+ e.getMessage());
+			throw ex;
+		}catch ( MalformedURLException e) {
 			IOException ex = new IOException("Unable to check if InvestigationUser '"+userId+" - "+ invId+"' exists in ICAT "+ e.getMessage());
 			throw ex;
 		}
@@ -158,7 +172,10 @@ public class IcatUtils {
 
 			return perfomIcatExistQuery(query);
 			
-		} catch (IcatException_Exception | MalformedURLException e) {
+		} catch (IcatException_Exception e) {
+			IOException ex = new IOException("Unable to check if UserGroup '"+scientistName+" - "+ groupName+"' exists in ICAT. "+ e.getMessage());
+			throw ex;
+		} catch (MalformedURLException e) {
 			IOException ex = new IOException("Unable to check if UserGroup '"+scientistName+" - "+ groupName+"' exists in ICAT. "+ e.getMessage());
 			throw ex;
 		}
@@ -178,7 +195,10 @@ public class IcatUtils {
 
 			return perfomIcatExistQuery(query);
 			
-		} catch (IcatException_Exception | MalformedURLException e) {
+		} catch (IcatException_Exception e) {
+			IOException ex = new IOException("Unable to check if Dataset '"+datasetName+"' exists in ICAT. "+ e.getMessage());
+			throw ex;
+		} catch (MalformedURLException e) {
 			IOException ex = new IOException("Unable to check if Dataset '"+datasetName+"' exists in ICAT. "+ e.getMessage());
 			throw ex;
 		}
@@ -249,7 +269,10 @@ public class IcatUtils {
 				return (User)list.get(0);
 			} 
 			
-		} catch (IcatException_Exception | MalformedURLException e) {
+		} catch (IcatException_Exception e) {
+			IOException ex = new IOException("Unable to retrive User '"+userName+" - "+userSurname+"' from ICAT. "+ e.getMessage());
+			throw ex;
+		} catch (MalformedURLException e) {
 			IOException ex = new IOException("Unable to retrive User '"+userName+" - "+userSurname+"' from ICAT. "+ e.getMessage());
 			throw ex;
 		}
@@ -274,7 +297,10 @@ public class IcatUtils {
 				return (FacilityCycle)list.get(0);
 			}
 			
-		} catch (IcatException_Exception | MalformedURLException e) {
+		} catch (IcatException_Exception e) {
+			IOException ex = new IOException("Unable to retrive FacilityCycle '"+runCode+"' from ICAT. "+ e.getMessage());
+			throw ex;
+		} catch (MalformedURLException e) {
 			IOException ex = new IOException("Unable to retrive FacilityCycle '"+runCode+"' from ICAT. "+ e.getMessage());
 			throw ex;
 		}
@@ -299,7 +325,10 @@ public class IcatUtils {
 				return (Facility)list.get(0);
 			}
 			
-		} catch (IcatException_Exception | MalformedURLException e) {
+		} catch (IcatException_Exception e) {
+			IOException ex = new IOException("Unable to retrive Facility '"+facilityName+"' from ICAT. "+ e.getMessage());
+			throw ex;
+		} catch (MalformedURLException e) {
 			IOException ex = new IOException("Unable to retrive Facility '"+facilityName+"' from ICAT. "+ e.getMessage());
 			throw ex;
 		}
@@ -324,7 +353,10 @@ public class IcatUtils {
 				return (Instrument)list.get(0);
 			}
 			
-		} catch (IcatException_Exception | MalformedURLException e) {
+		} catch (IcatException_Exception e) {
+			IOException ex = new IOException("Unable to retrive Facility '"+beamlineName+"' from ICAT. "+ e.getMessage());
+			throw ex;
+		}catch ( MalformedURLException e) {
 			IOException ex = new IOException("Unable to retrive Facility '"+beamlineName+"' from ICAT. "+ e.getMessage());
 			throw ex;
 		}
@@ -348,7 +380,10 @@ public class IcatUtils {
 				return (InvestigationType)list.get(0);
 			}
 			
-		} catch (IcatException_Exception | MalformedURLException e) {
+		} catch (IcatException_Exception e) {
+			IOException ex = new IOException("Unable to retrive InvestigationType '"+proposalCode+"' from ICAT. "+ e.getMessage());
+			throw ex;
+		}catch ( MalformedURLException e) {
 			IOException ex = new IOException("Unable to retrive InvestigationType '"+proposalCode+"' from ICAT. "+ e.getMessage());
 			throw ex;
 		}
@@ -374,7 +409,10 @@ public class IcatUtils {
 			}
 			
 			
-		} catch (IcatException_Exception | MalformedURLException e) {
+		} catch (IcatException_Exception e) {
+			IOException ex = new IOException("Unable to retrive Investigation '"+name+"' from ICAT. "+ e.getMessage());
+			throw ex;
+		} catch (MalformedURLException e) {
 			IOException ex = new IOException("Unable to retrive Investigation '"+name+"' from ICAT. "+ e.getMessage());
 			throw ex;
 		}
@@ -400,7 +438,10 @@ public class IcatUtils {
 				return (Study)list.get(0);
 			}
 			
-		} catch (IcatException_Exception | MalformedURLException e) {
+		} catch (IcatException_Exception e) {
+			IOException ex = new IOException("Unable to retrive Study '"+proposalName+"' from ICAT. "+ e.getMessage());
+			throw ex;
+		}catch ( MalformedURLException e) {
 			IOException ex = new IOException("Unable to retrive Study '"+proposalName+"' from ICAT. "+ e.getMessage());
 			throw ex;
 		}
@@ -425,7 +466,10 @@ public class IcatUtils {
 				return (Group)list.get(0);
 			}
 			
-		} catch (IcatException_Exception | MalformedURLException e) {
+		} catch (IcatException_Exception e) {
+			IOException ex = new IOException("Unable to retrive Study '"+proposalName+"' from ICAT. "+ e.getMessage());
+			throw ex;
+		}catch ( MalformedURLException e) {
 			IOException ex = new IOException("Unable to retrive Study '"+proposalName+"' from ICAT. "+ e.getMessage());
 			throw ex;
 		}

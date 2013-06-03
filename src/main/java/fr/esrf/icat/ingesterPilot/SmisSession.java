@@ -8,7 +8,7 @@ import javax.xml.rpc.ServiceException;
 import jmis1.jboss_net.services.SMISWebService.SMISWebServiceLocalServiceLocator;
 import jmis1.jboss_net.services.SMISWebService.SMISWebServiceSoapBindingStub;
 
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 
 
 public class SmisSession {
@@ -18,8 +18,9 @@ public class SmisSession {
 	private static final String SMIS_PSW = "ISPYB!=PXWEB";
 	
 	private static SMISWebServiceSoapBindingStub stub = null;
-	private static final Logger logger = Logger
-			.getLogger(IcatPilotIngester.class.getName());
+	//private static final Logger logger = Logger
+	//		.getLogger(IcatPilotIngester.class.getName());
+	
 
 	SmisSession() throws  ServiceException, MalformedURLException {
 		connect();
@@ -43,7 +44,7 @@ public class SmisSession {
 		stub.setPassword(SMIS_PSW);
 		stub.setTimeout(60 * 1000);
 		
-		logger.info("CONNECTED to SMIS.");
+		//logger.info("CONNECTED to SMIS.");
 	}
 
 

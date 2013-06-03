@@ -1,172 +1,280 @@
- <tomodb2>
+<tomodb2>
         <acquisition>
-                <beamline>ID19</beamline>
-                <nameExp>id19</nameExp>
-                <scanName>HA_5.06_Al2_Cu0.5_U176-11.5_rhynie-chert_RC15_xc1000_</scanName>
-                <disk>/data/visitor/ec1021/id19</disk>
-                <date>2012-11-16T09:08:55</date>
-                <machineMode>7/8 multibunch</machineMode>
-                <machineCurrentStart>160.758</machineCurrentStart>
-                <machineCurrentStop>201.125</machineCurrentStop>
-                <insertionDeviceName>U32d</insertionDeviceName>
-                <insertionDeviceGap>11.5</insertionDeviceGap>
-                <filter> diam_1.4_mm Al_2_mm_U Cu_0.5_mm</filter>
-                <monochromatorName>0</monochromatorName>
-                <energy>0</energy>
-                <tomo_N>4998</tomo_N>
-                <ref_On>4998</ref_On>
-                <ref_N>41</ref_N>
-                <dark_N>20</dark_N>
-                <y_Step>-50</y_Step>
+                <beamline>ID11</beamline>
+                <nameExp>id11</nameExp>
+                <scanName>AT_304_45N_taper_</scanName>
+                <disk>/data/visitor/ma1592/id11</disk>
+                <date>2013-02-18T21:08:31</date>
+                <machineMode>0</machineMode>
+                <machineCurrentStart>0</machineCurrentStart>
+                <machineCurrentStop>0</machineCurrentStop>
+                <insertionDeviceName>N/A</insertionDeviceName>
+                <insertionDeviceGap>-1</insertionDeviceGap>
+                <filter>N/A</filter>
+                <monochromatorName>N/A</monochromatorName>
+                <energy>-1</energy>
+                <tomo_N>1800</tomo_N>
+                <ref_On>1800</ref_On>
+                <ref_N>11</ref_N>
+                <dark_N>21</dark_N>
+                <y_Step>2</y_Step>
                 <ccdtime>0.15</ccdtime>
-                <scanDuration>16.0742</scanDuration>
-                <distance>1000</distance>
+                <scanDuration>22.2382</scanDuration>
+                <distance>166.7</distance>
                 <sourceSampleDistance>145000</sourceSampleDistance>
                 <scanRange>360</scanRange>
                 <scanType>continuous</scanType>
-                <realFinalAngles>360.013281</realFinalAngles>
-                <opticsName>ID19  5.02 um: pxsize 5.05 magn 2.77</opticsName>
-                <scintillator>LuAg_200</scintillator>
+                <realFinalAngles>270.004401, 270.104497</realFinalAngles>
+                <opticsName>ManualPixelSize: pxsize 1.94 magn 7.21649</opticsName>
+                <scintillator>GGG_6um</scintillator>
                 <cameraName>FRELON HD2k</cameraName>
                 <cameraBinning>H=1, V=1</cameraBinning>
-                <cameraFibers>15</cameraFibers>
-                <pixelSize>5.02</pixelSize>
-                <ccdMode>FTM</ccdMode>
+                <cameraFibers>0</cameraFibers>
+                <pixelSize>1.94</pixelSize>
+                <ccdMode>FFM</ccdMode>
                 <projectionSize>
                         <ROW_BEG>0</ROW_BEG>
-                        <ROW_END>1023</ROW_END>
+                        <ROW_END>2047</ROW_END>
                         <COL_BEG>0</COL_BEG>
                         <COL_END>2047</COL_END>
                         <DIM_1>2048</DIM_1>
-                        <DIM_2>1024</DIM_2>
+                        <DIM_2>2048</DIM_2>
                 </projectionSize>
-                <listSlits>
-                        <slits name="PS">
-                                <HG>4.4</HG>
-                                <VG>3.42313</VG>
-                                <HO>0.12</HO>
-                                <VO>0.480625</VO>
-                                <UP>2.19219</UP>
-                                <DOWN>1.23094</DOWN>
-                                <FRONT>2.32</FRONT>
-                                <BACK>2.08</BACK>
-                        </slits>
-                        <slits name="SS">
-                                <HG>10</HG>
-                                <VG>5</VG>
-                                <HO>0.116875</HO>
-                                <VO>0</VO>
-                                <UP>2.5</UP>
-                                <DOWN>2.5</DOWN>
-                                <FRONT>5.11688</FRONT>
-                                <BACK>4.88312</BACK>
-                        </slits>
-                        <slits name="BS">
-                                <HG>9.999</HG>
-                                <VG>10</VG>
-                                <HO>-5.822</HO>
-                                <VO>6.255</VO>
-                                <UP>11.2553</UP>
-                                <DOWN>-1.25522</DOWN>
-                                <FRONT>-0.8224</FRONT>
-                                <BACK>10.8216</BACK>
-                        </slits>
-                </listSlits>
                 <listMotors>
                         <motor>
-                                <motorName>rien</motorName>
-                                <motorPosition unit="mm">0</motorPosition>
+                                <motorName>nfdtx</motorName>
+                                <motorPosition unit="mm">166.7</motorPosition>
                         </motor>
                         <motor>
-                                <motorName>srot</motorName>
-                                <motorPosition unit="deg">0</motorPosition>
+                                <motorName>d1ty</motorName>
+                                <motorPosition unit="mm">-3.5</motorPosition>
                         </motor>
                         <motor>
-                                <motorName>yrot</motorName>
-                                <motorPosition unit="deg">4.5</motorPosition>
+                                <motorName>d1tz</motorName>
+                                <motorPosition unit="mm">140.25</motorPosition>
                         </motor>
                         <motor>
-                                <motorName>sz</motorName>
-                                <motorPosition unit="mm">-154.842</motorPosition>
+                                <motorName>d1rx</motorName>
+                                <motorPosition unit="mm">12.2782</motorPosition>
                         </motor>
                         <motor>
-                                <motorName>sx</motorName>
-                                <motorPosition unit="mm">4.05</motorPosition>
+                                <motorName>d1ry</motorName>
+                                <motorPosition unit="mm">2.848</motorPosition>
                         </motor>
                         <motor>
-                                <motorName>sy</motorName>
-                                <motorPosition unit="mm">4.39875</motorPosition>
+                                <motorName>d1rz</motorName>
+                                <motorPosition unit="mm">8658.24</motorPosition>
                         </motor>
                         <motor>
-                                <motorName>xc</motorName>
-                                <motorPosition unit="mm">1000</motorPosition>
+                                <motorName>d2ty</motorName>
+                                <motorPosition unit="mm">-238.2</motorPosition>
                         </motor>
                         <motor>
-                                <motorName>yc</motorName>
-                                <motorPosition unit="mm">342.83</motorPosition>
+                                <motorName>d2tz</motorName>
+                                <motorPosition unit="mm">-8.2</motorPosition>
                         </motor>
                         <motor>
-                                <motorName>zc1</motorName>
-                                <motorPosition unit="mm">18.4815</motorPosition>
+                                <motorName>d2ry</motorName>
+                                <motorPosition unit="mm">133.823</motorPosition>
                         </motor>
                         <motor>
-                                <motorName>m1focus</motorName>
-                                <motorPosition unit="mm">-233.332</motorPosition>
+                                <motorName>d2rz</motorName>
+                                <motorPosition unit="mm">3085.63</motorPosition>
                         </motor>
                         <motor>
-                                <motorName>m1rotc</motorName>
-                                <motorPosition unit="deg">-0.959269</motorPosition>
-                        </motor>
-                        <motor>
-                                <motorName>euro1</motorName>
-                                <motorPosition unit="mm">0</motorPosition>
-                        </motor>
-                        <motor>
-                                <motorName>cmx</motorName>
-                                <motorPosition unit="mm">888.695</motorPosition>
-                        </motor>
-                        <motor>
-                                <motorName>cmz</motorName>
-                                <motorPosition unit="mm">58.2393</motorPosition>
-                        </motor>
-                        <motor>
-                                <motorName>pz1</motorName>
-                                <motorPosition unit="mm">2</motorPosition>
-                        </motor>
-                        <motor>
-                                <motorName>r1</motorName>
-                                <motorPosition unit="mm">6.43998</motorPosition>
-                        </motor>
-                        <motor>
-                                <motorName>zfourmr</motorName>
-                                <motorPosition unit="mm">0.37</motorPosition>
-                        </motor>
-                        <motor>
-                                <motorName>simap</motorName>
+                                <motorName>d3tx</motorName>
                                 <motorPosition unit="mm">60</motorPosition>
                         </motor>
                         <motor>
-                                <motorName>zc2</motorName>
-                                <motorPosition unit="mm">1.97073</motorPosition>
+                                <motorName>d3ty</motorName>
+                                <motorPosition unit="mm">332.49</motorPosition>
                         </motor>
                         <motor>
-                                <motorName>urev</motorName>
-                                <motorPosition unit="mm">2</motorPosition>
+                                <motorName>d3tz</motorName>
+                                <motorPosition unit="mm">615.52</motorPosition>
                         </motor>
                         <motor>
-                                <motorName>gu32u</motorName>
-                                <motorPosition unit="mm">60.001</motorPosition>
+                                <motorName>ffdtx1</motorName>
+                                <motorPosition unit="mm">159</motorPosition>
                         </motor>
                         <motor>
-                                <motorName>gw150m</motorName>
-                                <motorPosition unit="mm">265.277</motorPosition>
+                                <motorName>ffdtx2</motorName>
+                                <motorPosition unit="mm">-52.2163</motorPosition>
                         </motor>
                         <motor>
-                                <motorName>gu32d</motorName>
-                                <motorPosition unit="mm">11.5</motorPosition>
+                                <motorName>ffdty1</motorName>
+                                <motorPosition unit="mm">-3.00001</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>ffdty2</motorName>
+                                <motorPosition unit="mm">-3</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>ffdtz1</motorName>
+                                <motorPosition unit="mm">0.8</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>ffdtz2</motorName>
+                                <motorPosition unit="mm">0.8</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>diffty</motorName>
+                                <motorPosition unit="mm">9.9015</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>difftz</motorName>
+                                <motorPosition unit="mm">-0.0757308</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>diffry</motorName>
+                                <motorPosition unit="mm">9.07782e-06</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>diffrz</motorName>
+                                <motorPosition unit="mm">-0.000629053</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>samtx</motorName>
+                                <motorPosition unit="mm">0</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>samty</motorName>
+                                <motorPosition unit="mm">6e-05</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>samtz</motorName>
+                                <motorPosition unit="mm">-0.01704</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>samrx</motorName>
+                                <motorPosition unit="mm">0.249317</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>samry</motorName>
+                                <motorPosition unit="mm">0.0332791</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>samx</motorName>
+                                <motorPosition unit="mm">0</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>samy</motorName>
+                                <motorPosition unit="mm">0</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>rotc</motorName>
+                                <motorPosition unit="deg">-0.524581</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>scint</motorName>
+                                <motorPosition unit="mm">0.699986</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>focus</motorName>
+                                <motorPosition unit="mm">-57714.4</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>focrev</motorName>
+                                <motorPosition unit="mm">-1.41</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>s10y</motorName>
+                                <motorPosition unit="mm">9.31</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>s10z</motorName>
+                                <motorPosition unit="mm">4.04</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>s10f</motorName>
+                                <motorPosition unit="mm">0.095</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>s10b</motorName>
+                                <motorPosition unit="mm">0.505</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>s10u</motorName>
+                                <motorPosition unit="mm">-0.47925</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>s10d</motorName>
+                                <motorPosition unit="mm">0.66925</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>s10ho</motorName>
+                                <motorPosition unit="mm">-0.205</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>s10hg</motorName>
+                                <motorPosition unit="mm">0.6</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>s10vo</motorName>
+                                <motorPosition unit="mm">-0.57425</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>s10vg</motorName>
+                                <motorPosition unit="mm">0.19</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>cpm18</motorName>
+                                <motorPosition unit="mm">6.181</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>CPM18aT</motorName>
+                                <motorPosition unit="mm">0.01</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>CPM18aO</motorName>
+                                <motorPosition unit="mm">-0.471</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>u22</motorName>
+                                <motorPosition unit="mm">24.998</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>lx</motorName>
+                                <motorPosition unit="mm">6</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>ly</motorName>
+                                <motorPosition unit="mm">2.40125</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>lz</motorName>
+                                <motorPosition unit="mm">5.48</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>lry</motorName>
+                                <motorPosition unit="mm">0.0450001</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>lrz</motorName>
+                                <motorPosition unit="mm">0.7625</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>vy</motorName>
+                                <motorPosition unit="mm">51.5275</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>vz</motorName>
+                                <motorPosition unit="mm">42</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>px</motorName>
+                                <motorPosition unit="mm">0.013984</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>py</motorName>
+                                <motorPosition unit="mm">0.022518</motorPosition>
+                        </motor>
+                        <motor>
+                                <motorName>pz</motorName>
+                                <motorPosition unit="mm">0.01091</motorPosition>
                         </motor>
                 </listMotors>
                 <ccdstatus>
                 </ccdstatus>
         </acquisition>
- </tomodb2>
+</tomodb2>

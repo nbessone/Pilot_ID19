@@ -13,7 +13,9 @@ import java.io.OutputStream;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -26,9 +28,12 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
+import junit.framework.Assert;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.log4j.Logger;
+import org.icatproject.IcatException_Exception;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.w3c.dom.Document;
@@ -39,11 +44,11 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import fr.esrf.icat.ingesterPilot.IcatPilotIngester;
+import fr.esrf.icat.ingesterPilot.IcatDbSetup;
 
 public class AppTest {
 
-	private static final Logger log = Logger.getLogger(IcatPilotIngester.class
-			.getName());
+	private static final Logger log = Logger.getLogger(IcatPilotIngester.class.getName());
 	static String rootDirectory = "/users/bessone/git/Pilot_ID19/";
 
 	/**
@@ -71,32 +76,44 @@ public class AppTest {
 	}
 
 	/**
-	 * Test the transformation of a tomoDb xml file in an Icat compatible xml
-	 * file
+	 * Test it the transformation of a tomoDb xml file in an Icat compatible xml
+	 * file works.
 	 */
 	@Ignore
 	@Test
 	public void testTransformTomoToIcatXml() {
 
 		String currentDir = System.getProperty("user.dir");
-		String path = currentDir.replace("/", "//").concat("\\resources\\");
-		String inXML = path + "tomoDB_Catalogue.xml";
-		String inXSL = path + "tomoDB_to_Icat.xsl";
-		String outTXT = path + "tomoTest.xml";
+		//String path = currentDir.replace("/", "//").concat("\\resources\\");
+		String path = currentDir.concat(File.separatorChar+"resources"+File.separatorChar);
+		String inXML  = path + "TomoDB_test_file.xml";
+		String inXSL  = path + "tomoDB_to_Icat.xsl";
+		String outXML = path + "tomoTest.xml";
+		//String expectedXML = path + "expected_tomoTest.xml";
 
 		// Transform the TomoDB file
 		// ---------------------------------------------------------------------
-		// TomoDBtoICAT.trasformTomo_in_ICAT(inXSL, inXML, outTXT);
+		try {
+			TomoDBtoICAT.trasformTomo_in_ICAT(inXSL, inXML, outXML);
+		} catch (TransformerException e) {
+			log.error("Impossible to convert TomoDB xml file in ICAT xml file");
+		}
+		
+		
 	}
 
+	/**
+	 * Copy a file from a remote location to another location (local).
+	 * @throws IOException
+	 */
 	@Ignore
 	@Test
 	public void copyDirectoryTest() throws IOException {
 
 		
 		  File source = new File(
-		  "\\\\gy\\visitor\\si2539\\id13\\PROCESS\\SESSION2\\tmp-volatile-tmp\\out_0108.edf"
-		  ); File target = new File(
+		  "\\\\gy\\visitor\\si2539\\id13\\PROCESS\\SESSION2\\tmp-volatile-tmp\\out_0108.edf"); 
+		  File target = new File(
 		  "C:\\Users\\bessone.ESRF\\git\\Pilot_ReplaceTomoDB\\ingesterPilot\\resources\\out_0108.edf"
 		  );
 		  
@@ -120,12 +137,13 @@ public class AppTest {
 		String filename =
 		// Clean ALL data in the DG except Facility
 		rootDirectory+"resources"+File.separatorChar+"clean.xml";
+		// rootDirectory+"resources"+File.separatorChar+"icat_Catalogue.xml";
 		try {
 			 IcatPilotIngester.importXmlFile(filename);
 
 			// Import all ParameterType relative to ID19
 			filename = rootDirectory+"resources"+File.separatorChar+"ParamTypeID19.xml";
-			 IcatPilotIngester.importXmlFile(filename);
+			IcatPilotIngester.importXmlFile(filename);
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -134,7 +152,7 @@ public class AppTest {
 	}
 
 	/**
-	 * Test the
+	 * Test to replase a "placeholder"in a xml file
 	 * 
 	 * @throws Exception
 	 */
@@ -171,112 +189,79 @@ public class AppTest {
 		String currentDir = System.getProperty("user.dir");
 		File xmlFile = new File(currentDir.replace("/", "//").concat(
 				"\\resources\\tomoTest.xml"));
-		// IcatPilotIngester.readRemoteFolderContent(remoteDir, xmlFile);
+		try {
+			IcatPilotIngester.readRemoteFolder_FormatXML_AppendToFile(remoteDir, xmlFile);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 
+	
+		/**
+	 * Stript to:
+	 * Deleta ALL content of ICAT database
+	 * Create root user and rules
+	 * Create ESRF main users, groups and other data
+	 * Import all parameter required by ID19, ID11 and ID22  
+	 * 
+	 * Aftere this, the ingester should be able to ingest any TomoDB files coming from ID19, ID11 or ID22. 
+	 */
 	@Ignore
 	@Test
-	public void searchID19Exp() {
-
-		System.out
-				.println("------------Test to find experiment from ID19 ---------------");
-		
-		
-		Process p = null;
-		String remoteDir = "\\\\gy\\visitor\\";
-		String command = "cmd  /c dir " + remoteDir + " /AD /ON /B"; // loop over PROPOSALs
-
+	public void InitIcatDB() {
 		try {
-			p = Runtime.getRuntime().exec(command);
-		} catch (IOException e){
-			log.error("Impossible run command: '"
-					+ command + "' at remote location: '" + remoteDir + "'. "
-					+ e.getMessage());
-		}
+			
+			IcatDbSetup.SetupDB();
+			
+			
+		/*	// Clean ALL data in the DB and create ROOT user and group
+			String filename = rootDirectory+"resources"+File.separatorChar+"clean-all.xml";
+			// to Delete needs to be ROOT.
+			IcatPilotIngester.importXmlFile(filename,IcatSession.ROOT_USER);
+
+			
+			// Create all requiered users and rules
+			IcatDbSetup.SetupEsrfSpecificData();
+			
+			
+			// Import all ParameterType relative to ID19
+			/*filename = rootDirectory+"resources"+File.separatorChar+"ParamTypeID19.xml";
+			IcatPilotIngester.importXmlFile(filename);* /
+			IcatDbSetup.SetupBeamlineSpecificData();
+        */
 		
-		BufferedReader stdInput = new BufferedReader(new InputStreamReader(	p.getInputStream()));
-
-		try {
-			String s1;
-			while ((s1 = stdInput.readLine()) != null) { // proposal level
-
-				if (!s1.contains("in")){
-					
-					String path1 = remoteDir + s1;
-					String command1 = "cmd  /c dir " + path1	+ " /AD-H /ON /B ^id19*"; // loop over BEAMLINEs
-					log.info("** "+ command1);
-					
-					Process p1 = Runtime.getRuntime().exec(command1);
-					BufferedReader stdInput1 = new BufferedReader(new InputStreamReader(p1.getInputStream()));
-					
-					String s2 = null;
-					while ((s2 = stdInput1.readLine()) != null) { // Beamline level
-	
-						//if (s2.contains("id19")) { // System.out.println("TROVATA");
-						log.info("---"+s2 );
-							String path2 = path1 +File.separatorChar+ s2;
-							
-						//	System.out.println(path1);
-							String command2 = "cmd  /c dir " + path2 + " /AD /B";// loop over DATASETs
-							Process p2 = null;
-	
-							p2 = Runtime.getRuntime().exec(command2);
-							BufferedReader stdInput2 = new BufferedReader(new InputStreamReader(p2.getInputStream()));
-							
-							String s3 = null;
-							while ((s3 = stdInput2.readLine()) != null) {// DataSet level
-								
-								
-								String path3 = path2 +File.separatorChar+ s3;						
-								String command3 = "cmd  /c dir " + path3 + " /A-D /B *.xml";
-								//String command3 = "exist { " + path3 + File.separatorChar+s3+ ".xml}";
-								
-								Process p3 = Runtime.getRuntime().exec(command3);
-								BufferedReader stdInput3 = new BufferedReader(new InputStreamReader(p3.getInputStream()));
-								
-								String s4 = null;
-								while ((s4 = stdInput3.readLine()) != null) {
-									if (s4.contains(s3+".xml")) {
-										
-										log.info(path3 + File.separatorChar+s4);
-									}
-									
-								}
-								
-								
-	
-							}
-				
-						//}
-					}
-
-				}
-
-			}
-		} catch (IOException e1) { // TODO Auto-generated catch block
-			e1.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 	
 	
-	/**
-	 * Retrieve the Experiment perfomed ona specific Beamline in a certan period of time 
-	 */
+	
+	@Ignore
 	@Test
-	public void getLatestInvestigationsTest() {
+	public void testSMISgetInvestigationByInstrumentAndDate() {
 		
 		
-		SmisUtils.getInvestigationFromSmisByBeamlinaAndDate("ID19", "2013/04/22T00:00:00", "2013/04/30T00:00:00");
-		
-		
-		
-		
-		
-		
-		
-		
+		Calendar calFrom = new GregorianCalendar(2013, 01, 01);
+		Calendar calTo   = new GregorianCalendar(2013, 05, 31);
+		SmisUtils.getInvestigationsByDates(calFrom, calTo);
+	
+	
 	}
 	
+	//@Ignore
+	@Test
+	public void testCommentXmlNodeInFile() throws Exception {
+	
+		String currentDir = System.getProperty("user.dir");
+		// Clean ALL data in the DB and create ROOT user and group
+		String filename = currentDir+File.separatorChar+"resources"+File.separatorChar+"tomoTest.xml";
+		File xmlFile = new File(filename);
+		IcatPilotIngester.commentXmlNodeInFile(xmlFile, "investigationParameter");
+	}
+
 
 }

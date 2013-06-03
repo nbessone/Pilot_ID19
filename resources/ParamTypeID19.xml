@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- ================================================================================== -->
-<!-- List of ParameterTypes for ID19 -->
-<!-- ================================================================================== -->
+	<!--
+		==================================================================================
+	-->
+	<!-- List of ParameterTypes for ID19 -->
+	<!--
+		==================================================================================
+	-->
 
 <icatdata>
 	<config xmlns:java="java">
@@ -18,133 +22,16 @@
 		</searchids>
 	</config>
 
-	<!-- ================================================================================== -->
-
-	<!-- <facility> <name>ESRF</name> <fullName>European Synchrotron Radiation 
-		Facility</fullName> <description>The world's best synchrotron :-)</description> 
-		<daysUntilRelease>0</daysUntilRelease> <url>http://www.esrf.eu</url> </facility> -->
-
-	<instrument>
-		<name>ID19</name>
-		<fullName>Beamline ID19</fullName>
-		<description>Tomography Beamline</description>
-		<facility>
-			<id xmlns:java="java">-1</id>
-		</facility>
-		<type>Beamline</type>
-	</instrument>
-
-	<investigationType>
-		<name>MX</name>
-		<description>Macromolecular christallography</description>
-		<facility>
-			<id xmlns:java="java">-1</id>
-		</facility>
-	</investigationType>
-
-	<investigationType>
-		<name>MA</name>
-		<description>Applied material science</description>
-		<facility>
-			<id xmlns:java="java">-1</id>
-		</facility>
-	</investigationType>
-
-<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
-
-	<investigationType>
-		<name>CH</name>
-		<description>Applied material science</description>
-		<facility>
-			<id xmlns:java="java">-1</id>
-		</facility>
-	</investigationType>
-	
-		<investigationType>
-		<name>EC</name>
-		<description>Applied material science</description>
-		<facility>
-			<id xmlns:java="java">-1</id>
-		</facility>
-	</investigationType>
-	
-		<investigationType>
-		<name>ES</name>
-		<description>Applied material science</description>
-		<facility>
-			<id xmlns:java="java">-1</id>
-		</facility>
-	</investigationType>
-	
-		<investigationType>
-		<name>EV</name>
-		<description>Applied material science</description>
-		<facility>
-			<id xmlns:java="java">-1</id>
-		</facility>
-	</investigationType>
-	
-		<investigationType>
-		<name>HC</name>
-		<description>Applied material science</description>
-		<facility>
-			<id xmlns:java="java">-1</id>
-		</facility>
-	</investigationType>
-	
-		<investigationType>
-		<name>HG</name>
-		<description>Applied material science</description>
-		<facility>
-			<id xmlns:java="java">-1</id>
-		</facility>
-	</investigationType>
-	
-		<investigationType>
-		<name>LS</name>
-		<description>Applied material science</description>
-		<facility>
-			<id xmlns:java="java">-1</id>
-		</facility>
-	</investigationType>
-	
-		<investigationType>
-		<name>MD</name>
-		<description>Applied material science</description>
-		<facility>
-			<id xmlns:java="java">-1</id>
-		</facility>
-	</investigationType>
-	
-		<investigationType>
-		<name>ME</name>
-		<description>Applied material science</description>
-		<facility>
-			<id xmlns:java="java">-1</id>
-		</facility>
-	</investigationType>
-	
-		<investigationType>
-		<name>MI</name>
-		<description>Applied material science</description>
-		<facility>
-			<id xmlns:java="java">-1</id>
-		</facility>
-	</investigationType>
-	
-		<investigationType>
-		<name>SC</name>
-		<description>Applied material science</description>
-		<facility>
-			<id xmlns:java="java">-1</id>
-		</facility>
-	</investigationType>
+	<!--
+		==================================================================================
+	-->
 
 
 
 
-
-<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+	<!--
+		xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+	-->
 	<!-- DATA FILE FORMAT -->
 
 	<datafileFormat>
@@ -157,7 +44,7 @@
 		</facility>
 	</datafileFormat>
 
-	<!-- edf FILE -->
+
 
 	<!-- DATA SET TYPE -->
 
@@ -1397,45 +1284,9 @@
 		<!-- <permissibleStringValues></permissibleStringValues> -->
 	</parameterType>
 
-	<parameterType>
-		<applicableToSample>false</applicableToSample>
-		<applicableToDataset>true</applicableToDataset>
-		<applicableToDatafile>false</applicableToDatafile>
-		<applicableToInvestigation>false</applicableToInvestigation>
-		<name>motor_sx</name>
-		<description>Motor position</description>
-		<units>mm</units>
-		<unitsFullName>Millimeter</unitsFullName>
-		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
-		<verified>true</verified>
-		<enforced>false</enforced>
-		<facility>
-			<id xmlns:java="java">-1</id>
-		</facility>
-		<maximumNumericValue></maximumNumericValue>
-		<minimumNumericValue></minimumNumericValue>
-		<!-- <permissibleStringValues></permissibleStringValues> -->
-	</parameterType>
 
-	<parameterType>
-		<applicableToSample>false</applicableToSample>
-		<applicableToDataset>true</applicableToDataset>
-		<applicableToDatafile>false</applicableToDatafile>
-		<applicableToInvestigation>false</applicableToInvestigation>
-		<name>motor_sy</name>
-		<description>Motor position</description>
-		<units>mm</units>
-		<unitsFullName>Millimeter</unitsFullName>
-		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
-		<verified>true</verified>
-		<enforced>false</enforced>
-		<facility>
-			<id xmlns:java="java">-1</id>
-		</facility>
-		<maximumNumericValue></maximumNumericValue>
-		<minimumNumericValue></minimumNumericValue>
-		<!-- <permissibleStringValues></permissibleStringValues> -->
-	</parameterType>
+
+
 
 	<parameterType>
 		<applicableToSample>false</applicableToSample>
@@ -1856,7 +1707,7 @@
 		<minimumNumericValue></minimumNumericValue>
 		<!-- <permissibleStringValues></permissibleStringValues> -->
 	</parameterType>
-	
+
 	<parameterType>
 		<applicableToSample>false</applicableToSample>
 		<applicableToDataset>true</applicableToDataset>
@@ -1876,7 +1727,7 @@
 		<minimumNumericValue></minimumNumericValue>
 		<!-- <permissibleStringValues></permissibleStringValues> -->
 	</parameterType>
-	
+
 	<parameterType>
 		<applicableToSample>false</applicableToSample>
 		<applicableToDataset>true</applicableToDataset>
@@ -1896,7 +1747,7 @@
 		<minimumNumericValue></minimumNumericValue>
 		<!-- <permissibleStringValues></permissibleStringValues> -->
 	</parameterType>
-	
+
 	<parameterType>
 		<applicableToSample>false</applicableToSample>
 		<applicableToDataset>true</applicableToDataset>
@@ -1916,7 +1767,7 @@
 		<minimumNumericValue></minimumNumericValue>
 		<!-- <permissibleStringValues></permissibleStringValues> -->
 	</parameterType>
-	
+
 	<parameterType>
 		<applicableToSample>false</applicableToSample>
 		<applicableToDataset>true</applicableToDataset>
@@ -1936,7 +1787,7 @@
 		<minimumNumericValue></minimumNumericValue>
 		<!-- <permissibleStringValues></permissibleStringValues> -->
 	</parameterType>
-	
+
 	<parameterType>
 		<applicableToSample>false</applicableToSample>
 		<applicableToDataset>true</applicableToDataset>
@@ -1956,7 +1807,7 @@
 		<minimumNumericValue></minimumNumericValue>
 		<!-- <permissibleStringValues></permissibleStringValues> -->
 	</parameterType>
-	
+
 	<parameterType>
 		<applicableToSample>false</applicableToSample>
 		<applicableToDataset>true</applicableToDataset>
@@ -1976,7 +1827,7 @@
 		<minimumNumericValue></minimumNumericValue>
 		<!-- <permissibleStringValues></permissibleStringValues> -->
 	</parameterType>
-	
+
 	<parameterType>
 		<applicableToSample>false</applicableToSample>
 		<applicableToDataset>true</applicableToDataset>
@@ -1996,7 +1847,7 @@
 		<minimumNumericValue></minimumNumericValue>
 		<!-- <permissibleStringValues></permissibleStringValues> -->
 	</parameterType>
-	
+
 	<parameterType>
 		<applicableToSample>false</applicableToSample>
 		<applicableToDataset>true</applicableToDataset>
@@ -2016,7 +1867,7 @@
 		<minimumNumericValue></minimumNumericValue>
 		<!-- <permissibleStringValues></permissibleStringValues> -->
 	</parameterType>
-	
+
 	<parameterType>
 		<applicableToSample>false</applicableToSample>
 		<applicableToDataset>true</applicableToDataset>
@@ -2036,7 +1887,7 @@
 		<minimumNumericValue></minimumNumericValue>
 		<!-- <permissibleStringValues></permissibleStringValues> -->
 	</parameterType>
-	
+
 	<parameterType>
 		<applicableToSample>false</applicableToSample>
 		<applicableToDataset>true</applicableToDataset>
@@ -2056,7 +1907,7 @@
 		<minimumNumericValue></minimumNumericValue>
 		<!-- <permissibleStringValues></permissibleStringValues> -->
 	</parameterType>
-	
+
 	<parameterType>
 		<applicableToSample>false</applicableToSample>
 		<applicableToDataset>true</applicableToDataset>
@@ -2076,7 +1927,7 @@
 		<minimumNumericValue></minimumNumericValue>
 		<!-- <permissibleStringValues></permissibleStringValues> -->
 	</parameterType>
-	
+
 	<parameterType>
 		<applicableToSample>false</applicableToSample>
 		<applicableToDataset>true</applicableToDataset>
@@ -2096,27 +1947,9 @@
 		<minimumNumericValue></minimumNumericValue>
 		<!-- <permissibleStringValues></permissibleStringValues> -->
 	</parameterType>
-	
-	<parameterType>
-		<applicableToSample>false</applicableToSample>
-		<applicableToDataset>true</applicableToDataset>
-		<applicableToDatafile>false</applicableToDatafile>
-		<applicableToInvestigation>false</applicableToInvestigation>
-		<name>motor_focrev</name>
-		<description>Motor position</description>
-		<units>mm</units>
-		<unitsFullName>Millimeter</unitsFullName>
-		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
-		<verified>true</verified>
-		<enforced>false</enforced>
-		<facility>
-			<id xmlns:java="java">-1</id>
-		</facility>
-		<maximumNumericValue></maximumNumericValue>
-		<minimumNumericValue></minimumNumericValue>
-		<!-- <permissibleStringValues></permissibleStringValues> -->
-	</parameterType>
-	
+
+
+
 	<parameterType>
 		<applicableToSample>false</applicableToSample>
 		<applicableToDataset>true</applicableToDataset>
@@ -2136,8 +1969,2477 @@
 		<minimumNumericValue></minimumNumericValue>
 		<!-- <permissibleStringValues></permissibleStringValues> -->
 	</parameterType>
-	
-	
+
+	<!-- NEW -->
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_nix</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_ax</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_ay</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_az</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_rx</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_ry</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_rz</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_ryoffs</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_sx45</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_sy45</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_rl</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_cx</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_cy</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_cz</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_px45</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_py45</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_sx</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_vsx</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_tilt</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_rytot</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_focus</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_svx</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_svy</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_smc100</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_focrev</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_unused</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_rotc</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_sc_rop</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_sc_rog</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_sc_zg</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_sc_yg</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>gu32a</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>tu32a</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>gw150b</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>tw150b</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>gu176c</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+	<!-- ID11 Parameters -->
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_nfdtx</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_d1ty</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_d1tz</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_d1rx</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_d1ry</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_d1rz</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_d2ty</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_d2tz</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_d2ry</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_d2rz</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_d3tx</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_d3ty</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_d3tz</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_ffdtx1</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_ffdtx2</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_ffdty1</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_ffdty2</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_ffdtz1</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_ffdtz2</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_diffty</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_difftz</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_diffry</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_diffrz</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_samtx</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_samty</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_samtz</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_samrx</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_samry</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_samx</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_samy</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_scint</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_s10y</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_s10z</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_s10f</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_s10b</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_s10u</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_s10d</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_s10ho</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_s10hg</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_s10vo</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_s10vg</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_cpm18</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_CPM18aT</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_CPM18aO</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_u22</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_lx</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_ly</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_lz</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_lry</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_lrz</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_vy</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_vz</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_px</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_py</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_pz</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+
+	<!-- PARAMETER ID22 -->
+
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_dummy</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_ksvg</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_ksvo</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_kshg</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_ksho</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_vmth</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_hmth</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_pmv1</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_pmv2</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_pmh1</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_pmh2</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_sy</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_sypz</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_sthy</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_srot</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_spush</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_sampy</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_sampz</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_vmx</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_vmy</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_vmz</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_fluo1x</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_fluo1y</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_fluo1z</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_fluo2x</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_fluo2y</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_fluo2z</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_crot</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_cfocus</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_cscint</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_tablez</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_lasery</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_laserz</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_cam2y</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_cam2z</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_u23d</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_mi_th</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+	<parameterType>
+		<applicableToSample>false</applicableToSample>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<name>motor_mi_h</name>
+		<description>Motor position</description>
+		<units>mm</units>
+		<unitsFullName>Millimeter</unitsFullName>
+		<valueType>NUMERIC</valueType> <!-- STRING NUMERIC DATE -->
+		<verified>true</verified>
+		<enforced>false</enforced>
+		<facility>
+			<id xmlns:java="java">-1</id>
+		</facility>
+		<maximumNumericValue></maximumNumericValue>
+		<minimumNumericValue></minimumNumericValue>
+		<!-- <permissibleStringValues></permissibleStringValues> -->
+	</parameterType>
+
+
 
 
 	<!-- SAMPLE TYPE -->

@@ -60,13 +60,20 @@
 
 		<!-- TEST to exclude in-house experiment IF ExpName == Bimline -->
 		<xsl:if test="$nameExp != $beamline">  <!-- TO CHAMGE to '=' NOT '!=' -->
+		
 			<!-- Pull off the Experiment Name -->
 			<xsl:element name="ExperimentName">
 				<xsl:value-of select="$nameExp" />
 			</xsl:element>
+			
 			<!-- Pull off the Instrument Name -->
 			<xsl:element name="Instrument">
 				<xsl:value-of select="$beamline" />
+			</xsl:element>
+			
+			<!-- Pull off the DataSet Name -->
+			<xsl:element name="DataSetName">
+				<xsl:value-of select="$dataset" />
 			</xsl:element>
 
 			<xsl:apply-templates />
