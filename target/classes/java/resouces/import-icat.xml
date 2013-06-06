@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Does a full import for all tables. Each icat table will have at least one entry afterwards. -->
+<!--  ATTENTION: you will need to change the user name in line 48 -->
+<icatdata xmlns:ns2="http://icatproject.org">
+	<!-- config for client -->
+	<config>
+		<haltOnError>false</haltOnError>
+		<entities2Clean>
+			<query>Facility</query>
+			<query>Instrument</query>
+			<query>InstrumentScientist</query>
+			<query>ParameterType</query>
+			<query>PermissibleStringValue</query>
+			<query>SampleType</query>
+			<query>DatasetType</query>
+			<query>DatafileFormat</query>
+			<query>InvestigationType</query>
+			<query>FacilityCycle</query>
+			<query>Investigation</query>
+			<query>InvestigationParameter</query>
+			<query>Keyword</query>
+			<query>InvestigationUser</query>
+			<query>Study</query>
+			<query>StudyInvestigation</query>
+			<query>Shift</query>
+			<query>Sample</query>
+			<query>SampleParameter</query>
+			<query>Dataset</query>
+			<query>DatasetParameter</query>
+			<query>Datafile</query>
+			<query>DatafileParameter</query>
+			<query>Publication</query>
+			<!-- clean auth tables at the end -->
+			<query>UserGroup</query>
+			<query>User</query>
+			<query>Group</query>
+		</entities2Clean>
+	</config>
+	<!-- configure authorization -->
+	<group>
+		<id>1</id>
+		<name>AdminGrp</name>
+	</group>
+
+	<user>
+		<fullName>ICAT root user</fullName>
+		<!-- change to one of your icat root users -->
+		<name>db/root</name>
+		<id>1</id>
+	</user>
+
+	<userGroup>
+		<group>
+			<id>1</id>
+		</group>
+		<user>
+			<id>1</id>
+		</user>
+	</userGroup>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>Facility</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>Instrument</what>
+	</rule>
+	
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>InstrumentScientist</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>ParameterType</what>
+	</rule>
+	
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>PermissibleStringValue</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>SampleType</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>DatasetType</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>DatafileFormat</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>InvestigationType</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>InvestigationParameter</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>FacilityCycle</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>Investigation</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>Keyword</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>InvestigationUser</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>Study</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>StudyInvestigation</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>Shift</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>Sample</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>SampleParameter</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>Dataset</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>DatasetParameter</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>Datafile</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>DatafileParameter</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>Publication</what>
+	</rule>
+
+	<!-- load data -->
+	<facility>
+		<id>1</id>
+		<name>ESRF</name>
+		<fullName>European Synchrotron Radiation Facility</fullName>
+		<description>The world's best synchrotron :-)</description>
+		<daysUntilRelease>0</daysUntilRelease>
+		<url>http://www.esrf.eu</url>
+	</facility>
+
+	<instrument>
+		<id>1</id>
+		<name>ID01</name>
+		<fullName>Beamline ID01</fullName>
+		<description>First beamline</description>
+		<facility>
+			<id>1</id>
+		</facility>
+		<type>Beamline</type>
+	</instrument>
+	
+	<instrumentScientist>
+		<instrument>
+			<id>1</id>
+		</instrument>
+		<user>
+			<id>1</id>
+		</user>
+	</instrumentScientist>
+
+	<parameterType>
+		<id>1</id>
+		<applicableToDatafile>true</applicableToDatafile>
+		<applicableToDataset>false</applicableToDataset>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<applicableToSample>false</applicableToSample>
+		<description>My first datafile parameter type</description>
+		<enforced>false</enforced>
+		<facility>
+			<id>1</id>
+		</facility>
+		<name>ParameterTypeDF</name>
+		<units>text</units>
+		<unitsFullName>Text</unitsFullName>
+		<valueType>STRING</valueType>
+		<verified>0</verified>
+	</parameterType>
+
+	<parameterType>
+		<id>2</id>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToDataset>true</applicableToDataset>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<applicableToSample>false</applicableToSample>
+		<description>My first dataset parameter type</description>
+		<enforced>false</enforced>
+		<facility>
+			<id>1</id>
+		</facility>
+		<maximumNumericValue>0</maximumNumericValue>
+		<minimumNumericValue>100</minimumNumericValue>
+		<name>ParameterTypeDS</name>
+		<units>m</units>
+		<unitsFullName>Meter</unitsFullName>
+		<valueType>NUMERIC</valueType>
+		<verified>0</verified>
+	</parameterType>
+
+	<parameterType>
+		<id>3</id>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToDataset>false</applicableToDataset>
+		<applicableToInvestigation>true</applicableToInvestigation>
+		<applicableToSample>false</applicableToSample>
+		<description>My first investigation parameter type</description>
+		<enforced>false</enforced>
+		<facility>
+			<id>1</id>
+		</facility>
+		<name>ParameterTypeIV</name>
+		<units>dd/mm/yyyy hh:mm:ss</units>
+		<unitsFullName>date and time</unitsFullName>
+		<valueType>DATE_AND_TIME</valueType>
+		<verified>0</verified>
+	</parameterType>
+
+	<parameterType>
+		<id>4</id>
+		<applicableToDatafile>false</applicableToDatafile>
+		<applicableToDataset>false</applicableToDataset>
+		<applicableToInvestigation>false</applicableToInvestigation>
+		<applicableToSample>true</applicableToSample>
+		<description>My first sample parameter type</description>
+		<enforced>false</enforced>
+		<facility>
+			<id>1</id>
+		</facility>
+		<name>ParameterTypeSP</name>
+		<units>text</units>
+		<unitsFullName>Text</unitsFullName>
+		<valueType>STRING</valueType>
+		<verified>0</verified>
+	</parameterType>
+	
+	<permissibleStringValue>
+		<type>
+			<id>4</id>
+		</type>
+		<value>ON</value>
+	</permissibleStringValue>
+
+	<permissibleStringValue>
+		<type>
+			<id>4</id>
+		</type>
+		<value>OFF</value>
+	</permissibleStringValue>
+
+	<sampleType>
+		<id>1</id>
+		<molecularFormula>H2O</molecularFormula>
+		<name>Water</name>
+		<safetyInformation>No risk, can be drunken.</safetyInformation>
+		<facility>
+			<id>1</id>
+		</facility>
+	</sampleType>
+
+	<datasetType>
+		<id>1</id>
+		<name>myDS</name>
+		<description>My dataset</description>
+		<facility>
+			<id>1</id>
+		</facility>
+	</datasetType>
+
+	<datafileFormat>
+		<id>1</id>
+		<description>Raw format</description>
+		<name>RAW</name>
+		<type>hdf5</type>
+		<version>1.0</version>
+		<facility>
+			<id>1</id>
+		</facility>
+	</datafileFormat>
+
+	<investigationType>
+		<id>1</id>
+		<name>public</name>
+		<description>Public experiment</description>
+		<facility>
+			<id>1</id>
+		</facility>
+	</investigationType>
+
+	<facilityCycle>
+		<id>1</id>
+		<description>First run 2012</description>
+		<name>Run 01/12</name>
+		<startDate>2012-01-01T08:00:00.000+02:00</startDate>
+		<endDate>2012-01-31T08:00:00.000+02:00</endDate>
+		<facility>
+			<id>1</id>
+		</facility>
+	</facilityCycle>
+
+	<investigation>
+		<id>1</id>
+		<doi>xxx</doi>
+		<name>Investigation1</name>
+		<releaseDate></releaseDate>
+		<startDate>2012-01-08T08:00:00.000+02:00</startDate>
+		<endDate>2012-01-10T08:00:00.000+02:00</endDate>
+		<summary>Bla bla bla</summary>
+		<title>My first experiment!!!</title>
+		<visitId>xyz</visitId>
+		<facility>
+			<id>1</id>
+		</facility>
+		<facilityCycle>
+			<id>1</id>
+		</facilityCycle>
+		<instrument>
+			<id>1</id>
+		</instrument>
+		<type>
+			<id>1</id>
+		</type>
+	</investigation>
+	
+	<investigationParameter>
+		<id>1</id>
+		<dateTimeValue>2012-01-08T10:00:00.000+02:00</dateTimeValue>
+		<error>555</error>
+		<numericValue></numericValue>
+		<rangeBottom></rangeBottom>
+		<rangeTop></rangeTop>
+		<stringValue></stringValue>
+		<type>
+			<id>3</id>
+		</type>
+		<investigation>
+			<id>1</id>
+		</investigation>
+	</investigationParameter>
+
+	<keyword>
+		<id>1</id>
+		<name>test</name>
+		<investigation>
+			<id>1</id>
+		</investigation>
+	</keyword>
+
+	<investigationUser>
+		<id>1</id>
+		<role>dummy</role>
+		<user>
+			<id>1</id>
+		</user>
+		<investigation>
+			<id>1</id>
+		</investigation>
+	</investigationUser>
+
+	<study>
+		<id>1</id>
+		<description>My first study</description>
+		<name>Study1</name>
+		<startDate>2012-01-08T08:00:00.000+02:00</startDate>
+		<status></status>
+		<user>
+			<id>1</id>
+		</user>
+	</study>
+
+	<studyInvestigation>
+		<id>1</id>
+		<study>
+			<id>1</id>
+		</study>
+		<investigation>
+			<id>1</id>
+		</investigation>
+	</studyInvestigation>
+
+	<shift>
+		<id>1</id>
+		<startDate>2012-01-08T09:00:00.000+02:00</startDate>
+		<endDate>2012-01-08T10:00:00.000+02:00</endDate>
+		<investigation>
+			<id>1</id>
+		</investigation>
+	</shift>
+
+	<publication>
+		<id>1</id>
+		<doi>abc-def</doi>
+		<fullReference>abc-def in the library</fullReference>
+		<repository>library</repository>
+		<repositoryId>0123456</repositoryId>
+		<url>http://www.library.com</url>
+		<investigation>
+			<id>1</id>
+		</investigation>
+	</publication>
+
+	<sample>
+		<id>1</id>
+		<name>Sample of water</name>
+		<type>
+			<id>1</id>
+		</type>
+		<investigation>
+			<id>1</id>
+		</investigation>
+	</sample>
+
+	<sampleParameter>
+		<id>1</id>
+		<dateTimeValue></dateTimeValue>
+		<error>666</error>
+		<numericValue></numericValue>
+		<rangeBottom></rangeBottom>
+		<rangeTop></rangeTop>
+		<stringValue>ON</stringValue>
+		<type>
+			<id>4</id>
+		</type>
+		<sample>
+			<id>1</id>
+		</sample>
+	</sampleParameter>
+
+	<dataset>
+		<id>1</id>
+		<complete>0</complete>
+		<description>incomplete set of DataFiles</description>
+		<doi>www-xxx-yyy</doi>
+		<location>/location/of/the/dataSet</location>
+		<name>Water data set</name>
+		<startDate>2012-01-08T09:00:00.000+02:00</startDate>
+		<endDate>2012-01-08T10:00:00.000+02:00</endDate>
+		<sample>
+			<id>1</id>
+		</sample>
+		<type>
+			<id>1</id>
+		</type>
+		<investigation>
+			<id>1</id>
+		</investigation>
+	</dataset>
+	
+	<datasetParameter>
+		<id>1</id>
+		<dateTimeValue></dateTimeValue>
+		<error>777</error>
+		<numericValue>5</numericValue>
+		<rangeBottom></rangeBottom>
+		<rangeTop></rangeTop>
+		<stringValue></stringValue>
+		<type>
+			<id>2</id>
+		</type>
+		<dataset>
+			<id>1</id>
+		</dataset>
+	</datasetParameter>
+
+	<datafile>
+		<id>1</id>
+		<checksum>6546489654654</checksum>
+		<datafileCreateTime>2012-01-08T11:00:00.000+02:00</datafileCreateTime>
+		<datafileModTime>2012-01-08T11:30:00.000+02:00</datafileModTime>
+		<description>first data file</description>
+		<doi>ppp-fff-rrr</doi>
+		<fileSize>65000</fileSize>
+		<location>/location/of/the/dataFile</location>
+		<name>fileName1</name>
+		<datafileFormat>
+			<id>1</id>
+		</datafileFormat>
+		<dataset>
+			<id>1</id>
+		</dataset>
+	</datafile>
+	
+	<datafileParameter>
+		<id>1</id>
+		<dateTimeValue></dateTimeValue>
+		<error>888</error>
+		<numericValue></numericValue>
+		<rangeBottom></rangeBottom>
+		<rangeTop></rangeTop>
+		<stringValue>Parameter datafile value</stringValue>
+		<type>
+			<id>1</id>
+		</type>
+		<datafile>
+			<id>1</id>
+		</datafile>
+	</datafileParameter>
+
+</icatdata>

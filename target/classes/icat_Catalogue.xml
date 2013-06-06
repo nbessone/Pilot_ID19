@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Does a full import for all tables. Each icat table will have at least one entry afterwards. -->
+<!--  ATTENTION: you will need to change the user name in line 48 -->
+<icatdata xmlns:ns2="http://icatproject.org">
+	<!-- config for client -->
+	<config>
+		<haltOnError>false</haltOnError>
+		<entities2Clean>
+			<query>Facility</query>
+			<query>Instrument</query>
+			<query>InstrumentScientist</query>
+			<query>ParameterType</query>
+			<query>PermissibleStringValue</query>
+			<query>SampleType</query>
+			<query>DatasetType</query>
+			<query>DatafileFormat</query>
+			<query>InvestigationType</query>
+			<query>FacilityCycle</query>
+			<query>Investigation</query>
+			<query>InvestigationParameter</query>
+			<query>Keyword</query>
+			<query>InvestigationUser</query>
+			<query>Study</query>
+			<query>StudyInvestigation</query>
+			<query>Shift</query>
+			<query>Sample</query>
+			<query>SampleParameter</query>
+			<query>Dataset</query>
+			<query>DatasetParameter</query>
+			<query>Datafile</query>
+			<query>DatafileParameter</query>
+			<query>Publication</query>
+			<!-- clean auth tables at the end -->
+			<query>UserGroup</query>
+			<query>User</query>
+			<query>Group</query>
+		</entities2Clean>
+	</config>
+	<!-- configure authorization -->
+	<group>
+		<id>1</id>
+		<name>AdminGrp</name>
+	</group>
+
+	<user>
+		<fullName>ICAT root user</fullName>
+		<!-- change to one of your icat root users -->
+		<name>db/root</name>
+		<id>1</id>
+	</user>
+
+	<userGroup>
+		<group>
+			<id>1</id>
+		</group>
+		<user>
+			<id>1</id>
+		</user>
+	</userGroup>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>Facility</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>Instrument</what>
+	</rule>
+	
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>InstrumentScientist</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>ParameterType</what>
+	</rule>
+	
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>PermissibleStringValue</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>SampleType</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>DatasetType</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>DatafileFormat</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>InvestigationType</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>InvestigationParameter</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>FacilityCycle</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>Investigation</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>Keyword</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>InvestigationUser</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>Study</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>StudyInvestigation</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>Shift</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>Sample</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>SampleParameter</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>Dataset</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>DatasetParameter</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>Datafile</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>DatafileParameter</what>
+	</rule>
+
+	<rule>
+		<crudFlags>CRUD</crudFlags>
+		<group>
+			<id>1</id>
+		</group>
+		<what>Publication</what>
+	</rule>
+
+	
+</icatdata>
