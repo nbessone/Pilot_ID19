@@ -1,3 +1,0 @@
-String remoteDir = "\\\\gy\\visitor\\ec1201\\id19\\HA_27.98_Al2_Cu6_W0.5_W150-38_Rhynie-CR02_xc16000_test1_";System.out.println(remoteDir); 
-String pathLinux = remoteDir.replace("\\", "/");pathLinux= pathLinux.replaceAll("gy", "data").substring(1);
-System.out.println(pathLinux); 

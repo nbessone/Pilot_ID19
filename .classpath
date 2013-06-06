@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-  <classpathentry kind="src" path="src/test/java" output="target/test-classes" including="**/*.java"/>
-  <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
-  <classpathentry kind="output" path="target/classes"/>
-  <classpathentry kind="var" path="M2_REPO/javax/xml/jaxrpc-api/1.1/jaxrpc-api-1.1.jar"/>
-  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-  <classpathentry kind="var" path="M2_REPO/junit/junit/3.8.1/junit-3.8.1.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.7.2/slf4j-api-1.7.2.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/apache-jar-resource-bundle/1.4/apache-jar-resource-bundle-1.4.jar"/>
+	<classpathentry kind="src" path="src/main"/>
+	<classpathentry kind="src" path="src/test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="/users/bessone/git/Pilot_ID19/lib/smis-utils.jar"/>
+	<classpathentry kind="lib" path="/users/bessone/git/Pilot_ID19/lib/icatXmlTestClient-0.2.jar"/>
+	<classpathentry kind="lib" path="/users/bessone/git/Pilot_ID19/lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="/users/bessone/git/Pilot_ID19/lib/mis-commons.jar"/>
+	<classpathentry kind="lib" path="/users/bessone/git/Pilot_ID19/lib/SMISServer-ejb.jar"/>
+	<classpathentry kind="lib" path="/users/bessone/git/Pilot_ID19/lib/SMISServer-ejb3.jar"/>
+	<classpathentry kind="lib" path="/users/bessone/git/Pilot_ID19/lib/SMISServer-ejb-client.jar"/>
+	<classpathentry kind="lib" path="/users/bessone/git/Pilot_ID19/lib/SMISServer-ws-client.jar"/>
+	<classpathentry kind="lib" path="/users/bessone/git/Pilot_ID19/lib/xercesImpl-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/users/bessone/git/Pilot_ID19/lib/axis-1.1/axis-ant.jar"/>
+	<classpathentry kind="lib" path="/users/bessone/git/Pilot_ID19/lib/axis-1.1/commons-discovery.jar"/>
+	<classpathentry kind="lib" path="/users/bessone/git/Pilot_ID19/lib/axis-1.1/commons-logging.jar"/>
+	<classpathentry kind="lib" path="/users/bessone/git/Pilot_ID19/lib/axis-1.1/ejb.jar"/>
+	<classpathentry kind="lib" path="/users/bessone/git/Pilot_ID19/lib/axis-1.1/jaxrpc.jar"/>
+	<classpathentry kind="lib" path="/users/bessone/git/Pilot_ID19/lib/axis-1.1/log4j-1.2.8.jar"/>
+	<classpathentry kind="lib" path="/users/bessone/git/Pilot_ID19/lib/axis-1.1/saaj.jar"/>
+	<classpathentry kind="lib" path="/users/bessone/git/Pilot_ID19/lib/axis-1.1/wsdl4j.jar"/>
+	<classpathentry kind="lib" path="/users/bessone/git/Pilot_ID19/lib/axis-1.1/xercesImpl-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/users/bessone/git/Pilot_ID19/lib/jboss-4.0.3SP1/axis-ws4ee.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="output" path="target/classes"/>
 </classpath>
