@@ -38,47 +38,70 @@
 
 
 	<dependencies>
-		<!--
-			<dependency> <groupId>com.sun.jdmk</groupId>
-			<artifactId>jmxtools</artifactId> <version>1.2.1</version>
-			</dependency>
-		-->
+
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.15</version>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.mail</groupId>
+					<artifactId>mail</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>javax.jms</groupId>
+					<artifactId>jms</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.jdmk</groupId>
+					<artifactId>jmxtools</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.jmx</groupId>
+					<artifactId>jmxri</artifactId>
+				</exclusion>
+			</exclusions>
+			<scope>compile</scope>
+		</dependency>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
 		</dependency>
 
-		<!--
-			dependency> <groupId>org.junit</groupId>
-			<artifactId>junit</artifactId> <version>1.4</version> </dependency
-		-->
-		<!--
-			<dependency> <groupId>org.apache</groupId>
-			<artifactId>log4j</artifactId> <version>3.8.1</version>
-			<scope>test</scope> </dependency> <dependency>
-			<groupId>org.slf4j</groupId> <artifactId>slf4j-api</artifactId>
-			<version>${slf4jVersion}</version> </dependency>
-		-->
-		<!--
-			<dependency> <groupId>log4j</groupId> <artifactId>log4j</artifactId>
-			<version>1.2.16</version> <scope>runtime</scope> </dependency>
-
-			<dependency> <groupId>javax.xml</groupId>
-			<artifactId>jaxrpc-api</artifactId> <version>1.1</version>
-			</dependency>
-		-->
-		<!--
-			dependency> <groupId>javax.xml</groupId>
-			<artifactId>jaxrpc-api</artifactId> <version>1.1</version>
-			</dependency- <dependency> <groupId>org.apache</groupId>
-			<artifactId>apache-jar-resource-bundle</artifactId>
-			<version>1.4</version> </dependency> <dependency>
+		<dependency>
 			<groupId>org.icatproject</groupId>
-			<artifactId>icat.client</artifactId> <version>4.2.5</version>
-			</dependency>
-		-->
+			<artifactId>icat.client</artifactId>
+			<version>4.2.5</version>
+		</dependency>
 
+		<dependency>
+			<groupId>javax.xml</groupId>
+			<artifactId>jaxrpc-api</artifactId>
+			<version>1.1</version>
+		</dependency>
+
+<!--		<dependency>-->
+<!--			<groupId>axis</groupId>-->
+<!--			<artifactId>axis</artifactId>-->
+<!--			<version>1.1-beta</version>-->
+<!--		</dependency>-->
+
+		<dependency>
+			<groupId>jboss</groupId>
+			<artifactId>jbossall-client</artifactId>
+			<version>3.2.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.icatproject</groupId>
+			<artifactId>testclient</artifactId>
+			<version>0.2</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/icatXmlTestClient-0.2.jar</systemPath>
+		</dependency>
 
 		<!--
 			=================================================================================
@@ -90,22 +113,64 @@
 
 		<dependency>
 			<groupId>fr.esrf.smis</groupId>
-			<artifactId>smis</artifactId>
+			<artifactId>SMISServer-ws-client</artifactId>
 			<version>1.0.0</version>
 			<scope>system</scope>
 			<!--
 				<systemPath>${basedir}/lib/SMISServer-ejb-client.jar</systemPath>
 			-->
-			<systemPath>/users/bessone/git/Pilot_ID19/lib/SMISServer-ejb-client.jar</systemPath>
+			<systemPath>${basedir}/lib/SMISServer-ws-client.jar</systemPath>   <!-- /users/bessone/git/Pilot_ID19  -->
+		</dependency>
+		
+
+		<dependency>
+			<groupId>fr.esrf.utils</groupId>
+			<artifactId>bean</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>/users/bessone/git/Pilot_ID19/lib/smis-utils.jar</systemPath>
+		</dependency>
+		
+		<dependency>
+			<groupId>fr.esrf.utils</groupId>
+			<artifactId>bean</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/SMISServer-ejb-client.jar</systemPath>
+		</dependency>
+		
+<!--		<dependency>-->
+<!--			<groupId>org.icatproject</groupId>-->
+<!--			<artifactId>testclient</artifactId>-->
+<!--			<version>0.2</version>-->
+<!--			<scope>system</scope>-->
+<!--			<systemPath>${basedir}/lib/icatXmlTestClient-0.2.jarr</systemPath>-->
+<!--		</dependency>-->
+		
+		
+		<dependency>
+			<groupId>fr.esrf.utils</groupId>
+			<artifactId>bean</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/SMISServer-ejb.jar</systemPath>
+		</dependency>
+		
+		<dependency>
+			<groupId>fr.esrf.utils</groupId>
+			<artifactId>bean</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/SMISServer-ejb3.jar</systemPath>
 		</dependency>
 		<!--
 			=================================================================================
 		-->
 	</dependencies>
-	
-	
+
+
 	<build>
-		<sourceDirectory>java/src/main</sourceDirectory>
+		<sourceDirectory>src/main/fr/esrf/icat/ingesterPilot/</sourceDirectory>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -126,6 +191,6 @@
 			</resource>
 		</resources>
 	</build>
-	
-	
+
+
 </project>
