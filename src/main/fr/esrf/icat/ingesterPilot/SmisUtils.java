@@ -9,12 +9,9 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
@@ -44,14 +41,14 @@ import fr.esrf.utils.bean.MISBeanUtils;
 
 public class SmisUtils {
 
-	public static final String[] PROPOSALS = new String[] { "CH", "ES", "EV",
-			"HC", "HG", "LS", "MA", "ME", "MI", "MX", "SC", "MD" };
-	public static final Set<String> PROPOSAL_SET = new HashSet<String>(Arrays
-			.asList(PROPOSALS));
+	
+	//public static final String[] PROPOSALS = new String[] { "CH", "ES", "EV",
+	//		"HC", "HG", "LS", "MA", "ME", "MI", "MX", "SC", "MD" };
+	//public static final Set<String> PROPOSAL_SET = new HashSet<String>(Arrays
+	//		.asList(PROPOSALS));
+	
 	private static final Logger logger = Logger
 			.getLogger(IcatPilotIngester.class.getName());
-	private static final String rootDirectory = "/data/visitor/";
-
 	
 	
 	/**
@@ -386,20 +383,20 @@ public class SmisUtils {
 	 * @param instrument
 	 * @param from
 	 * @param to
+	 * @throws Exception 
 	 */
 	public static List<String> getInvestigationsByDates(Calendar from,
-			Calendar to) {
+			Calendar to) throws Exception {
 
 		List<String> TomoDBFileList = new ArrayList<String>();
 		SMISWebServiceSoapBindingStub stub = null;
-		String path = rootDirectory;
+		String path = IcatPilotIngester.rootDirectory;
 
 		try {
 			stub = SmisSession.getStub();
-		} catch (MalformedURLException e) {
+		} catch (Exception e) {
 			logger.error("Error in the SMIS connection. " + e.getMessage());
-		} catch (ServiceException e) {
-			logger.error("Error in the SMIS connection. " + e.getMessage());
+			throw e;
 		}
 
 		ExpSessionInfoLightVO[] resultList = null;
@@ -431,7 +428,7 @@ public class SmisUtils {
 				// exclude all INDUSTRIAL proposals
 				if (!res.getCategCode().toLowerCase().equals("in")) {
 
-					path = rootDirectory.concat(res.getCategCode().toLowerCase()
+					path = IcatPilotIngester.rootDirectory.concat(res.getCategCode().toLowerCase()
 							+ res.getCategCounter() + File.separatorChar
 							+ instrument);
 

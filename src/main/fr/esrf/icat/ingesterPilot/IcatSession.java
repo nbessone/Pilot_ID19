@@ -15,6 +15,7 @@ import org.icatproject.Login.Credentials.Entry;
 public class IcatSession {
 
 	public static String ICAT_HOSTNAME = "http://ovm-icat.esrf.fr:8080";// "https://wwws.esrf.fr";
+	public static String ICAT_ESRF_URL_ENDPOINT = "/icat";
 	public static String ICAT_SECURITY_PLUGIN = "db"; // db|ldap
 
 	// Installation User: to be use ONLY to create the ADMIN user
@@ -22,6 +23,8 @@ public class IcatSession {
 	public static String ROOT_USERNAME = "root";
 	public static String ROOT_PSW = "icat";
 
+	
+	
 	// Administrator: to be used to enter ESRF specific metadata in an EMPTY DB
 	public static String ADMIN_USER = "ADMIN";
 	public static String ADMIN_USERNAME = "admin";
@@ -61,7 +64,7 @@ public class IcatSession {
 	public static void connect() throws IcatException_Exception,
 			MalformedURLException {
 
-		URL icatUrl = new URL(ICAT_HOSTNAME + "/icat/ICATService/ICAT?wsdl");//
+		URL icatUrl = new URL(ICAT_HOSTNAME + ICAT_ESRF_URL_ENDPOINT+ "/ICATService/ICAT?wsdl");
 		QName qName = new QName("http://icatproject.org", "ICATService");
 		ICATService service = new ICATService(icatUrl, qName);
 		icat = service.getICATPort();

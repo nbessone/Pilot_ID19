@@ -15,7 +15,6 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -37,36 +36,37 @@ public class IcatPilotIngester {
 	 * @param args
 	 */
 	static String rootDirectory = "/data/visitor/";// \\gy\visitor\
+	public static final String[] beamlines = { "id19", "id11", "id22" };
 
+	public static final List<String> instruments = Arrays.asList(beamlines);
 	static String proposalName;
 	static Map<String, String> map = new HashMap<String, String>();
 	static Long icatInvestigationID = (long) 0;
 	private static final Logger logger = Logger
 			.getLogger(IcatPilotIngester.class.getName());
 	// Beamlines supported
-	public static final String[] beamlines = { "id19", "id11", "id22" };
-	public static final List<String> instruments = Arrays.asList(beamlines);
+	
+	
 
 	public static void main(String[] args) {
-		String filepath = rootDirectory + "ma1145" + File.separatorChar
-				+ "id19" + File.separatorChar + "freeDM_A_"
-				+ File.separatorChar + "freeDM_A_.xml";
 
 		try {
 			// run("/data/visitor/md745/id19/0001_HA_769/0001_HA_769.xml");
 			 //testAllRun();
 			importInvestigatinsGotFromSMIS();
 		} catch (Exception e) {
-			logger.error("Impossible ingest metadata relative to :'" + filepath
-					+ "'. \n" + e.getMessage());
+			logger.error("Impossible ingest metadata file. \n" + e.getMessage());
 		}
 	}
 
-	public static void importInvestigatinsGotFromSMIS() {
+	public static void importInvestigatinsGotFromSMIS() throws Exception {
 
-		Calendar calFrom = /*Calendar.getInstance();// */ new GregorianCalendar(2013, 01, 01);
-		calFrom.add(Calendar.DATE, -1);			//  YESTERDAY  
-		Calendar calTo = Calendar.getInstance();//  TODAY      new GregorianCalendar(2013, 05, 31);
+		/*
+		 * Specify the time slot you are interest in the form of <initialDate> : <finalDate>
+		 */
+		Calendar calFrom = Calendar.getInstance();//  new GregorianCalendar(2013, 01, 01);
+		calFrom.add(Calendar.DATE, -1);			  //  YESTERDAY  
+		Calendar calTo = Calendar.getInstance();  //  TODAY      new GregorianCalendar(2013, 05, 31);
 		
 		List<String> listOfTomoDBFiles = SmisUtils
 				.getInvestigationsByDates(calFrom, calTo);
@@ -121,15 +121,9 @@ public class IcatPilotIngester {
 				File beamlineFile = new File(beamlinePath); // === BeamlineName directory
 				// ===
 				FilenameFilter textFilter = new FilenameFilter() {
-					// Select only folder named: id19, id11 or id22
+					// Select only folder listed in "instruments"
 					public boolean accept(File dir, String name) {
 						String lowercaseName = name.toLowerCase();
-						/*if (lowercaseName.startsWith("id19")
-								|| lowercaseName.startsWith("id11")
-								|| lowercaseName.startsWith("id22")
-						// || lowercaseName.startsWith("id17-")
-						)*/
-							// loop over various Instruments
 						if (instruments.contains(lowercaseName)) {
 							return true;
 						} else {
@@ -156,9 +150,7 @@ public class IcatPilotIngester {
 						}
 					});
 
-					//int count = 0; // DEBUG
-
-					for (int j = 0; j < datasetDirectories.length /*&& count < 5*/; j++) {// DEBUG
+					for (int j = 0; j < datasetDirectories.length; j++) {
 
 						final String datasetDir = datasetDirectories[j];
 
@@ -184,7 +176,6 @@ public class IcatPilotIngester {
 						if (tomodbFilename != null && tomodbFilename.length > 0) {
 
 							try {
-							//	count++;
 
 								// System.out.println(tomoDB_filePath +
 								// File.separatorChar + s3 + ".xml");
@@ -215,18 +206,21 @@ public class IcatPilotIngester {
 	@SuppressWarnings("unchecked")
 	public static void run(String remoteFileName) throws Exception {
 
-		logger
-				.info("BEGIN ingestion of TomoDB file: '" + remoteFileName
-						+ "'.");
-
+		/*
+		 * Define name and location of required files  
+		 */
 		String currentDir = System.getProperty("user.dir");
-
 		String path = currentDir.concat(File.separatorChar + "resources"
 				+ File.separatorChar);
 		String tomoDB_XML = path + "imput.xml";
-		String inXSL = path + "tomoDB_to_Icat.xsl";
-		String outTXT = path + "tomoTest.xml";
+		String inXSL      = path + "tomoDB_to_Icat.xsl";
+		String outTXT     = path + "tomoTest.xml";
 
+		
+		logger
+		.info("BEGIN ingestion of TomoDB file: '" + remoteFileName
+				+ "'.");
+		
 		// Retrieve TomoDB XML file and copy it locally
 		// ---------------------------------------------------------------------
 		try {
@@ -391,7 +385,7 @@ public class IcatPilotIngester {
 	 * @return Map
 	 * @throws Exception
 	 */
-	private static Map getParametersFromXmlFile(String fileName)
+	private static Map<String, String> getParametersFromXmlFile(String fileName)
 			throws Exception {
 
 		String expName = null;
@@ -455,8 +449,8 @@ public class IcatPilotIngester {
 		try {
 			raf = new RandomAccessFile(xmlFile, "rw");
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.error("Impossible to open in R/W mode file: '"+xmlFile+"'. "+e.getMessage());
+			throw(e);
 		}
 		String replacingString = " ";
 		long pointer;
@@ -485,6 +479,8 @@ public class IcatPilotIngester {
 				}
 			}
 		} catch (IOException e) {
+			logger.error("Impossible access file: '"
+					+ xmlFile + "'. " + e.getMessage());
 			Exception ex = new IOException("Impossible access file: '"
 					+ xmlFile + "'. " + e.getMessage());
 			throw (ex);
@@ -506,7 +502,13 @@ public class IcatPilotIngester {
 	 */
 	static void replaceStringInFile(File xmlFile, String match,
 			String replacingString) throws Exception {
-		RandomAccessFile raf = new RandomAccessFile(xmlFile, "rw");
+		RandomAccessFile raf = null;
+		try {
+			raf = new RandomAccessFile(xmlFile, "rw");
+		} catch (FileNotFoundException e) {
+			logger.error("Impossible to open in R/W mode file: '"+xmlFile+"'. "+e.getMessage());
+			throw(e);
+		}
 		long pointer;
 		try {
 			pointer = raf.getFilePointer();
@@ -532,6 +534,8 @@ public class IcatPilotIngester {
 				}
 			}
 		} catch (IOException e) {
+			logger.error("Impossible access file: '"
+					+ xmlFile + "'. " + e.getMessage());
 			Exception ex = new IOException("Impossible access file: '"
 					+ xmlFile + "'. " + e.getMessage());
 			throw (ex);
@@ -909,6 +913,8 @@ public class IcatPilotIngester {
 			}
 			raf.close();
 		} catch (IOException e) {
+			logger.error("Impossible access file: '"
+					+ xmlFile + "'. " + e.getMessage());
 			Exception ex = new IOException("Impossible access file: '"
 					+ xmlFile + "'. " + e.getMessage());
 			throw (ex);
