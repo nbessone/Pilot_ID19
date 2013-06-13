@@ -5,6 +5,7 @@
 ## SVN files
 .svn*
 
+
 ## generic files to ignore
 *~
 *.lock
@@ -13,3 +14,5 @@
 *.out
 *.log*
 
+# Specific file to ignore
+config.proprerties

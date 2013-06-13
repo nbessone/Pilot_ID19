@@ -17,8 +17,8 @@ import jmis1.jboss_net.services.SMISWebService.SMISWebServiceSoapBindingStub;
 public class SmisSession {
 
 	private static final String SMIS_SERVER_URL = "http://vmis1:8080/jboss-net/services/SMISWebService";
-	private static final String SMIS_USERNAME = null;
-	private static final String SMIS_PSW = null;
+	static  String SMIS_USERNAME = null;
+	static  String SMIS_PSW = null;
 	
 	private static SMISWebServiceSoapBindingStub stub = null;
 	private static final Logger logger = Logger
@@ -42,7 +42,7 @@ public class SmisSession {
 	public static void connect() throws ServiceException, IOException {
 		
 		if (SMIS_USERNAME.isEmpty() || SMIS_PSW.isEmpty() ){
-			String str = "SMISS Login namd or passward not set. Open file SmisSession.java and set a value for the two variables.";
+			String str = "SMISS Login name or passward not set. Open file config.properties and set a value for the two variables: SMIS_USERNAME, SMIS_PSW.";
 			logger.error(str);
 			throw new IOException(str);
 		}

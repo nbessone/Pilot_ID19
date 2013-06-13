@@ -3,7 +3,6 @@ package fr.esrf.icat.ingesterPilot;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.rmi.RemoteException;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -16,7 +15,6 @@ import java.util.List;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
-import javax.xml.rpc.ServiceException;
 
 import jmis1.jboss_net.services.SMISWebService.SMISWebServiceSoapBindingStub;
 
@@ -137,8 +135,13 @@ public class SmisUtils {
 
 				// Create proposal USER in Icat
 				// -----------------------------------------------------------
-				createIcatUser(icat, sessionId, group, proposalName,
+				createIcatUser(icat, sessionId, group, "ldap/"+proposalName,
 						proposalName);
+				/* 
+				 * This kind of user is the only both present in LDAP and SMIS
+				 * Since the authentication plugin in use is LDAP we have to prefix
+				 * the username with 'ldap/'
+				 */
 
 				// Create main proposal USER in Icat
 				// -----------------------------------------------------------
@@ -390,7 +393,7 @@ public class SmisUtils {
 
 		List<String> TomoDBFileList = new ArrayList<String>();
 		SMISWebServiceSoapBindingStub stub = null;
-		String path = IcatPilotIngester.rootDirectory;
+		String path = IcatPilotIngester.ROOT_DIRECTORY;
 
 		try {
 			stub = SmisSession.getStub();
@@ -428,7 +431,7 @@ public class SmisUtils {
 				// exclude all INDUSTRIAL proposals
 				if (!res.getCategCode().toLowerCase().equals("in")) {
 
-					path = IcatPilotIngester.rootDirectory.concat(res.getCategCode().toLowerCase()
+					path = IcatPilotIngester.ROOT_DIRECTORY.concat(res.getCategCode().toLowerCase()
 							+ res.getCategCounter() + File.separatorChar
 							+ instrument);
 
@@ -513,6 +516,9 @@ public class SmisUtils {
 	}
 
 	/**
+	 * NOTE:
+	 * The username MUST be prefix with the authenticaton method used: 'db/'or 'ldap/'
+	 * or it won't match the information coming from the Icat authentication plugin.
 	 * 
 	 * @param icat
 	 * @param sessionId
@@ -531,7 +537,7 @@ public class SmisUtils {
 		User icatUser = null;
 		if (!IcatUtils.userExistInICAT(scientistFirstName, scientistName)) {
 			icatUser = new User();
-			icatUser.setName(scientistName.toUpperCase());
+			icatUser.setName(scientistName.toLowerCase());
 			icatUser.setFullName(scientistName.toUpperCase() + " "
 					+ scientistFirstName);
 			Long userId = icat.create(sessionId, icatUser);

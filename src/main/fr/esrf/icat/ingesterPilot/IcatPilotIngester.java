@@ -18,6 +18,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -35,7 +36,7 @@ public class IcatPilotIngester {
 	/**
 	 * @param args
 	 */
-	static String rootDirectory = "/data/visitor/";// \\gy\visitor\
+	static String ROOT_DIRECTORY ;//= "/data/visitor/";// \\gy\visitor\
 	public static final String[] beamlines = { "id19", "id11", "id22" };
 
 	public static final List<String> instruments = Arrays.asList(beamlines);
@@ -44,16 +45,29 @@ public class IcatPilotIngester {
 	static Long icatInvestigationID = (long) 0;
 	private static final Logger logger = Logger
 			.getLogger(IcatPilotIngester.class.getName());
-	// Beamlines supported
+	private final static String configFile = "config.proprerties";
 	
 	
 
 	public static void main(String[] args) {
 
+		
+		Properties prop = new Properties();
 		try {
+			
+			prop.load(new FileInputStream(configFile));
+			SmisSession.SMIS_USERNAME = prop.getProperty("SMIS_USERNAME");
+			SmisSession.SMIS_PSW      = prop.getProperty("SMIS_PSW");
+			ROOT_DIRECTORY      = prop.getProperty("ROOT_DIRECTORY");
+			
+
 			// run("/data/visitor/md745/id19/0001_HA_769/0001_HA_769.xml");
-			 //testAllRun();
+			//testAllRun();
 			importInvestigatinsGotFromSMIS();
+			
+		} catch (FileNotFoundException e1) {
+			logger.error("File '"+configFile+"' not found. It contains necessary information for the execution."+ e1.getMessage());
+			
 		} catch (Exception e) {
 			logger.error("Impossible ingest metadata file. \n" + e.getMessage());
 		}
@@ -101,7 +115,7 @@ public class IcatPilotIngester {
 		 * gy.esrf.fr:/data/visitor /visitor/
 		 */
 
-		File file = new File(rootDirectory); // === ProposalName directory ===
+		File file = new File(ROOT_DIRECTORY); // === ProposalName directory ===
 		String[] directories = file.list(new FilenameFilter() {
 			@Override
 			public boolean accept(File dir, String name) {
@@ -117,7 +131,7 @@ public class IcatPilotIngester {
 
 			if (!proposalDir.contains("in")) { // exclude all INDUSTRIAL proposals
 
-				String beamlinePath = rootDirectory + proposalDir;
+				String beamlinePath = ROOT_DIRECTORY + proposalDir;
 				File beamlineFile = new File(beamlinePath); // === BeamlineName directory
 				// ===
 				FilenameFilter textFilter = new FilenameFilter() {
@@ -305,7 +319,7 @@ public class IcatPilotIngester {
 			throws IOException {
 
 		String datsetName = null;
-		String headerPath = rootDirectory;
+		String headerPath = ROOT_DIRECTORY;
 
 		if (remoteFileName.indexOf(headerPath) == 0) {
 
@@ -338,7 +352,7 @@ public class IcatPilotIngester {
 			throws IOException {
 
 		String proposalName = null;
-		String headerPath = rootDirectory;
+		String headerPath = ROOT_DIRECTORY;
 
 		if (remoteFileName.indexOf(headerPath) == 0) {
 			int proposalEndIndex = remoteFileName.indexOf(File.separatorChar,

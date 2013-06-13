@@ -216,7 +216,7 @@ public class AppTest {
 	
 	@Ignore
 	@Test
-	public void testSMISgetInvestigationByInstrumentAndDate() {
+	public void testSMISgetInvestigationByInstrumentAndDate() throws Exception {
 		
 		
 		Calendar calFrom = new GregorianCalendar(2013, 01, 01);
