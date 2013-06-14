@@ -135,12 +135,12 @@ public class SmisUtils {
 
 				// Create proposal USER in Icat
 				// -----------------------------------------------------------
-				createIcatUser(icat, sessionId, group, "ldap/"+proposalName,
+				createIcatUser(icat, sessionId, group, IcatSession.ICAT_SECURITY_PLUGIN+proposalName,
 						proposalName);
 				/* 
 				 * This kind of user is the only both present in LDAP and SMIS
 				 * Since the authentication plugin in use is LDAP we have to prefix
-				 * the username with 'ldap/'
+				 * the username with ICAT_SECURITY_PLUGIN
 				 */
 
 				// Create main proposal USER in Icat

@@ -226,7 +226,7 @@ public class AppTest {
 	
 	}
 	
-	//@Ignore
+	@Ignore
 	@Test
 	public void testCommentXmlNodeInFile() throws Exception {
 	
@@ -238,4 +238,12 @@ public class AppTest {
 	}
 
 
+	//@Ignore
+	@Test
+	public void testCreateNewRules() throws Exception {
+		
+		IcatDbSetup.addRulesToIcat();
+	
+	}
+	
 }

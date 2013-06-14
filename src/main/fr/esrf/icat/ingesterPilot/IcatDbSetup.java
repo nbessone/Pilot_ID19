@@ -335,6 +335,29 @@ public class IcatDbSetup {
             logger.info("Created " + table + " ingestor rule");
         }
 
+        
+        //----------------------------------------------------------------------------------------------------------------------------
+        //Investigatio-User rules 
+        List<String> inv_userTable = new ArrayList<String>();
+        
+        inv_userTable.add(												 "Investigation <-> InvestigationUser <-> User [name = :user]");
+        inv_userTable.add(					  "InvestigationParameter <-> Investigation <-> InvestigationUser <-> User [name = :user]");
+        inv_userTable.add(				 					 "Dataset <-> Investigation <-> InvestigationUser <-> User [name = :user]");
+        inv_userTable.add(			    "DatasetParameter <-> Dataset <-> Investigation <-> InvestigationUser <-> User [name = :user]");
+        inv_userTable.add(					    "Datafile <-> Dataset <-> Investigation <-> InvestigationUser <-> User [name = :user]");
+        inv_userTable.add("DatafileParameter <-> Datafile <-> Dataset <-> Investigation <-> InvestigationUser <-> User [name = :user]");
+        inv_userTable.add(									  "Sample <-> Investigation <-> InvestigationUser <-> User [name = :user]");
+        
+        Rule rule = new  Rule();
+        for(String what : inv_userTable)
+        {
+            rule.setGroup(null);
+            rule.setCrudFlags("CRU"); //no delete permission for instrument scientist
+            rule.setWhat(what);
+            icat.create(sessionId, rule);
+            System.out.println("Created Instrument Scientist rule: '" + what +"'");
+        }
+        
     /*    TODO
         
         //----------------------------------------------------------------------------------------------------------------------------
@@ -360,53 +383,7 @@ public class IcatDbSetup {
             System.out.println("Created Instrument Scientist rule: '" + what +"'");
         }
         
-        /*
-        Rule isInv = new Rule();
-        isInv.setCrudFlags("CRU");
-        isInv.setWhat("Investigation <-> Instrument <-> InstrumentScientist <-> User [name = :user]");
-        isInv.setGroup(null); //rules applies regardless of group membership (not explicity needed)
-        icat.create(sessionId, isInv);
-        
-        
-        Rule isInvParam = new Rule();
-        isInvParam.setCrudFlags("CRU");
-        isInvParam.setWhat("InvestigationParameter <-> Investigation <-> Instrument <-> InstrumentScientist <-> User [name = :user]");
-        icat.create(sessionId, isInvParam);
-        
-        //dataset and dataset parameter
-        Rule isDs = new Rule();
-        isDs.setCrudFlags("CRU");
-        isDs.setWhat("Dataset <-> Investigation <-> Instrument <-> InstrumentScientist <-> User [name = :user]");
-        icat.create(sessionId, isDs);
-        
-        Rule isDsParam = new Rule();
-        isDsParam.setCrudFlags("CRU");
-        isDsParam.setWhat("DatasetParameter <-> Dataset <-> Investigation <-> Instrument <-> InstrumentScientist <-> User [name = :user]");
-        icat.create(sessionId, isDsParam);
-        
-        //datafile and datafile parameter
-        Rule isDf = new Rule();
-        isDf.setCrudFlags("CRU");
-        isDf.setWhat("Datafile <-> Dataset <-> Investigation <-> Instrument <-> InstrumentScientist <-> User [name = :user]");
-        icat.create(sessionId, isDf);
-        
-        Rule isDfParam = new Rule();
-        isDfParam.setCrudFlags("CRU");
-        isDfParam.setWhat("DatafileParameter <-> Datafile <-> Dataset <-> Investigation <-> Instrument <-> InstrumentScientist <-> User [name = :user]");
-        icat.create(sessionId, isDfParam);
-        
-        //samples - via investigation
-        Rule isSampleInv = new Rule();
-        isSampleInv.setCrudFlags("CRU");
-        isSampleInv.setWhat("Sample <-> Investigation <-> Instrument <-> InstrumentScientist <-> User [name = :user]");
-        icat.create(sessionId, isSampleInv);
-        
-        Rule isSampleParamInv = new Rule();
-        isSampleParamInv.setCrudFlags("CRU");
-        isSampleParamInv.setWhat("SampleParameter <-> Sample <-> Investigation <-> Instrument <-> InstrumentScientist <-> User [name = :user]");
-        icat.create(sessionId, isSampleParamInv);
-        * /
-        
+                
         
         //----------------------------------------------------------------------------------------------------------------------------
         //Principal Investigator - for now they can read and update everything they own - Investigation + P ; DS + P ; DF + P; Sample + P
@@ -430,51 +407,7 @@ public class IcatDbSetup {
             System.out.println("Created Principal Investigator rule: '" + what +"'");
         }
         
-        /*
-        Rule piInv = new Rule();
-        piInv.setCrudFlags("RU");
-        piInv.setWhat("Investigation <-> InvestigationUser [role = 'Principal Investigator'] <-> User [name = :user]");
-        icat.create(sessionId, piInv);
-                    
-        Rule piInvParam = new Rule();
-        piInvParam.setCrudFlags("RU");
-        piInvParam.setWhat("InvestigationParameter <-> Investigation <-> InvestigationUser [role = 'Principal Investigator'] <-> User [name = :user]");
-        icat.create(sessionId, piInvParam);
-        
-        //DS
-        Rule piDs = new Rule();
-        piDs.setCrudFlags("RU");
-        piDs.setWhat("Dataset <-> Investigation <-> InvestigationUser [role = 'Principal Investigator'] <-> User [name = :user]");
-        icat.create(sessionId, piDs);
-        
-        Rule piDsParam = new Rule();
-        piDsParam.setCrudFlags("RU");
-        piDsParam.setWhat("DatasetParameter <-> Dataset <-> Investigation <-> InvestigationUser [role = 'Principal Investigator'] <-> User [name = :user]");
-        icat.create(sessionId, piDsParam);
-        
-        //DF
-        Rule piDf = new Rule();
-        piDf.setCrudFlags("RU");
-        piDf.setWhat("Datafile <-> Dataset <-> Investigation <-> InvestigationUser [role = 'Principal Investigator'] <-> User [name = :user]");
-        icat.create(sessionId, piDf);
-        
-        Rule piDfParam = new Rule();
-        piDfParam.setCrudFlags("RU");
-        piDfParam.setWhat("DatafileParameter <-> Datafile <-> Dataset <-> Investigation <-> InvestigationUser [role = 'Principal Investigator']  <-> User [name = :user]");
-        icat.create(sessionId, piDfParam);
-        
-        //Sample - via investigation
-        Rule piSampleInv = new Rule();
-        piSampleInv.setCrudFlags("RU");
-        piSampleInv.setWhat("Sample <-> Investigation <-> InvestigationUser [role = 'Principal Investigator'] <-> User [name = :user]");
-        icat.create(sessionId, piSampleInv);
-        
-        Rule piSampleParamInv = new Rule();
-        piSampleParamInv.setCrudFlags("RU");
-        piSampleParamInv.setWhat("SampleParameter <-> Sample <-> Investigation <-> InvestigationUser [role = 'Principal Investigator'] <-> User [name = :user]");
-        icat.create(sessionId, piSampleParamInv);
-        * /
-        
+                
         
         //----------------------------------------------------------------------------------------------------------------------------
         //Co-Investigator - for now they can read everything they are associated with - Investigation + P ; DS + P ; DF + P; Sample + P
@@ -498,50 +431,8 @@ public class IcatDbSetup {
             System.out.println("Created Co-Investigator rule: '" + what +"'");
         }  
         
-        /*
-        Rule coiInv = new Rule();
-        coiInv.setCrudFlags("R");
-        coiInv.setWhat("Investigation <-> InvestigationUser  <-> User <-> User [name = :user]");
-        icat.create(sessionId, coiInv);
+        */
         
-        Rule coiInvParam = new Rule();
-        coiInvParam.setCrudFlags("R");
-        coiInvParam.setWhat("InvestigationParameter <-> Investigation <-> InvestigationUser  <-> User <-> User [name = :user]");
-        icat.create(sessionId, coiInvParam);
-        
-        //DS
-        Rule coiDs = new Rule();
-        coiDs.setCrudFlags("R");
-        coiDs.setWhat("Dataset <-> Investigation <-> InvestigationUser  <-> User <-> User [name = :user]");
-        icat.create(sessionId, coiDs);
-        
-        Rule coiDsParam = new Rule();
-        coiDsParam.setCrudFlags("R");
-        coiDsParam.setWhat("DatasetParameter <-> Dataset <-> Investigation <-> InvestigationUser  <-> User <-> User [name = :user]");
-        icat.create(sessionId, coiDsParam);
-        
-        //DF
-        Rule coiDf = new Rule();
-        coiDf.setCrudFlags("R");
-        coiDf.setWhat("Datafile <-> Dataset <-> Investigation <-> InvestigationUser  <-> User <-> User [name = :user]");
-        icat.create(sessionId, coiDf);
-        
-        Rule coiDfParam = new Rule();
-        coiDfParam.setCrudFlags("R");
-        coiDfParam.setWhat("DatafileParameter <-> Datafile <-> Dataset <-> Investigation <-> InvestigationUser  <-> User <-> User [name = :user]");
-        icat.create(sessionId, coiDfParam);
-        
-        //Sample - via investigation
-        Rule coiSampleInv = new Rule();
-        coiSampleInv.setCrudFlags("R");
-        coiSampleInv.setWhat("Sample <-> Investigation <-> InvestigationUser  <-> User <-> User [name = :user]");
-        icat.create(sessionId, coiSampleInv);
-        
-        Rule coiSampleParamInv = new Rule();
-        coiSampleParamInv.setCrudFlags("R");
-        coiSampleParamInv.setWhat("SampleParameter <-> Sample <-> Investigation <-> InvestigationUser  <-> User <-> User [name = :user]");
-        icat.create(sessionId, coiSampleParamInv);
-		*/
 		
       //=========================================================================================
       //=========================================================================================
@@ -712,6 +603,121 @@ public class IcatDbSetup {
 			throw e;
 		}
 	}
+	
+	//----------------------------------------------------------------------------------------------
+	
+	
+	
+	public static void addRulesToIcat() throws IcatException_Exception{
+		
+	
+	 try {
+			IcatSession.connect(IcatSession.ADMIN_USER);
+			icat = IcatSession.getIcat();
+			sessionId = IcatSession.getSession();
+			
+		}catch (MalformedURLException e) {
+			logger.error("Impossible connnect to Icat: " + e.getMessage());
+			//throw e;
+		}catch (IcatException_Exception e) {
+			logger.error("Impossible connnect to Icat: " + e.getMessage());
+			//throw e;
+		}
+		
+        
+        //----------------------------------------------------------------------------------------------------------------------------
+        //instrument scientist rules - these cause problems - see ICAT issue 83 https://code.google.com/p/icatproject/issues/detail?id=83 
+        //investigation and investigation parameter
+        List<String> scientistTables = new ArrayList<String>();
+        
+        scientistTables.add(												"Investigation <-> InvestigationUser <-> User [name = :user]");
+        scientistTables.add(					 "InvestigationParameter <-> Investigation <-> InvestigationUser <-> User [name = :user]");
+        scientistTables.add(									"Dataset <-> Investigation <-> InvestigationUser <-> User [name = :user]");
+        scientistTables.add(			   "DatasetParameter <-> Dataset <-> Investigation <-> InvestigationUser <-> User [name = :user]");
+        scientistTables.add(					   "Datafile <-> Dataset <-> Investigation <-> InvestigationUser <-> User [name = :user]");
+        scientistTables.add( "DatafileParameter <-> Datafile <-> Dataset <-> Investigation <-> InvestigationUser <-> User [name = :user]");
+        scientistTables.add(									 "Sample <-> Investigation <-> InvestigationUser <-> User [name = :user]");
+        
+      /*  scientistTables.add(												"Investigation <-> Instrument <-> InstrumentScientist <-> User [name = :user]");
+        scientistTables.add(					 "InvestigationParameter <-> Investigation <-> Instrument <-> InstrumentScientist <-> User [name = :user]");
+        scientistTables.add(									"Dataset <-> Investigation <-> Instrument <-> InstrumentScientist <-> User [name = :user]");
+        scientistTables.add(			   "DatasetParameter <-> Dataset <-> Investigation <-> Instrument <-> InstrumentScientist <-> User [name = :user]");
+        scientistTables.add(					   "Datafile <-> Dataset <-> Investigation <-> Instrument <-> InstrumentScientist <-> User [name = :user]");
+        scientistTables.add( "DatafileParameter <-> Datafile <-> Dataset <-> Investigation <-> Instrument <-> InstrumentScientist <-> User [name = :user]");
+        scientistTables.add(									 "Sample <-> Investigation <-> Instrument <-> InstrumentScientist <-> User [name = :user]");  */
+        
+        
+        Rule rule = new  Rule();
+        for(String what : scientistTables)
+        {
+            rule.setGroup(null);
+            rule.setCrudFlags("CRU"); //no delete permission for instrument scientist
+            rule.setWhat(what);
+            icat.create(sessionId, rule);
+            System.out.println("Created Instrument Scientist rule: '" + what +"'");
+        }
+        
+               
+        
+		
+		/*
+		 
+		List<String> scientistTables = new ArrayList<String>();
+		Rule rule = new  Rule();
+   
+		 
+        //----------------------------------------------------------------------------------------------------------------------------
+        //Principal Investigator - for now they can read and update everything they own - Investigation + P ; DS + P ; DF + P; Sample + P
+        scientistTables.clear();
+        
+        scientistTables.add(											   "Investigation <-> InvestigationUser [role = 'Principal Investigator'] <-> User [name = :user]");
+        scientistTables.add(					"InvestigationParameter <-> Investigation <-> InvestigationUser [role = 'Principal Investigator'] <-> User [name = :user]");
+        scientistTables.add(								   "Dataset <-> Investigation <-> InvestigationUser [role = 'Principal Investigator'] <-> User [name = :user]");
+        scientistTables.add(			  "DatasetParameter <-> Dataset <-> Investigation <-> InvestigationUser [role = 'Principal Investigator'] <-> User [name = :user]");
+        scientistTables.add(					  "Datafile <-> Dataset <-> Investigation <-> InvestigationUser [role = 'Principal Investigator'] <-> User [name = :user]");
+        scientistTables.add("DatafileParameter <-> Datafile <-> Dataset <-> Investigation <-> InvestigationUser [role = 'Principal Investigator'] <-> User [name = :user]");
+        scientistTables.add(									"Sample <-> Investigation <-> InvestigationUser [role = 'Principal Investigator'] <-> User [name = :user]");
+        scientistTables.add(				"SampleParameter <-> Sample <-> Investigation <-> InvestigationUser [role = 'Principal Investigator'] <-> User [name = :user]");
+        
+        for(String what : scientistTables)
+        {
+			rule.setGroup(null);
+            rule.setCrudFlags("RU"); //ONLY Read/Update permission for Principal scientist
+            rule.setWhat(what);
+            icat.create(sessionId, rule);
+            System.out.println("Created Principal Investigator rule: '" + what +"'");
+        }
+        */
+        
+      /*          
+        
+        //----------------------------------------------------------------------------------------------------------------------------
+        //Co-Investigator - for now they can read everything they are associated with - Investigation + P ; DS + P ; DF + P; Sample + P
+        scientistTables.clear();
+        
+        scientistTables.add(											   "Investigation <-> InvestigationUser <-> User <-> User [name = :user]");
+        scientistTables.add("					 InvestigationParameter <-> Investigation <-> InvestigationUser <-> User <-> User [name = :user]");
+        scientistTables.add(								   "Dataset <-> Investigation <-> InvestigationUser <-> User <-> User [name = :user]");
+        scientistTables.add(			  "DatasetParameter <-> Dataset <-> Investigation <-> InvestigationUser <-> User <-> User [name = :user]");
+        scientistTables.add(					  "Datafile <-> Dataset <-> Investigation <-> InvestigationUser <-> User <-> User [name = :user]");
+        scientistTables.add("DatafileParameter <-> Datafile <-> Dataset <-> Investigation <-> InvestigationUser <-> User <-> User [name = :user]");
+        scientistTables.add(									"Sample <-> Investigation <-> InvestigationUser <-> User <-> User [name = :user]");
+        scientistTables.add(				"SampleParameter <-> Sample <-> Investigation <-> InvestigationUser <-> User <-> User [name = :user]");
+                
+        for(String what : scientistTables)
+        {
+            rule.setGroup(null);
+            rule.setCrudFlags("R"); //ONLY Read permission for Co-Investigator 
+            rule.setWhat(what);
+            icat.create(sessionId, rule);
+            System.out.println("Created Co-Investigator rule: '" + what +"'");
+        }  
+        
+        */
+		
+		
+	}
+     
 	
 	
 }

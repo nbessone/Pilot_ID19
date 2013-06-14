@@ -36,10 +36,10 @@ public class IcatPilotIngester {
 	/**
 	 * @param args
 	 */
-	static String ROOT_DIRECTORY ;//= "/data/visitor/";// \\gy\visitor\
-	public static final String[] beamlines = { "id19", "id11", "id22" };
+	static String ROOT_DIRECTORY ;
+	public static final String[] BEAMLINES = { "id19", "id11", "id22" };
 
-	public static final List<String> instruments = Arrays.asList(beamlines);
+	public static final List<String> instruments = Arrays.asList(BEAMLINES);
 	static String proposalName;
 	static Map<String, String> map = new HashMap<String, String>();
 	static Long icatInvestigationID = (long) 0;
@@ -206,7 +206,7 @@ public class IcatPilotIngester {
 			}
 		}
 
-		logger.info("FINISH - All "+beamlines+" proposals with investigations has been inported....");
+		logger.info("FINISH - All "+BEAMLINES+" proposals with investigations has been inported....");
 
 	}
 
