@@ -36,7 +36,7 @@ public class IcatPilotIngester {
 	/**
 	 * @param args
 	 */
-	static String ROOT_DIRECTORY ;
+	static String ROOT_DIRECTORY;
 	public static final String[] BEAMLINES = { "id19", "id11", "id22" };
 
 	public static final List<String> instruments = Arrays.asList(BEAMLINES);
@@ -46,52 +46,130 @@ public class IcatPilotIngester {
 	private static final Logger logger = Logger
 			.getLogger(IcatPilotIngester.class.getName());
 	private final static String configFile = "config.proprerties";
-	
-	
 
 	public static void main(String[] args) {
 
-		
 		Properties prop = new Properties();
+		String usageErrorMsg = "Parameters:  <modeType(IOException,readFromSmisTimeGap)>, <dateFrom(YYYY-MM-DD)>, <dateTo(YYYY-MM-DD)>";
 		try {
-			
+
+			final String[] MODETYPES = { "readFromDisk", "readFromSmisTimeGap" };
+			final List<String> modetype = Arrays.asList(MODETYPES);
+
 			prop.load(new FileInputStream(configFile));
 			SmisSession.SMIS_USERNAME = prop.getProperty("SMIS_USERNAME");
-			SmisSession.SMIS_PSW      = prop.getProperty("SMIS_PSW");
-			ROOT_DIRECTORY      = prop.getProperty("ROOT_DIRECTORY");
-			
+			SmisSession.SMIS_PSW = prop.getProperty("SMIS_PSW");
+			ROOT_DIRECTORY = prop.getProperty("ROOT_DIRECTORY");
 
-			// run("/data/visitor/md745/id19/0001_HA_769/0001_HA_769.xml");
-			//testAllRun();
-			importInvestigatinsGotFromSMIS();
-			
+			String mode = null;
+			if (args.length > 0) {
+				try {
+					mode = args[0];
+					// Only two modes are allowed: MODETYPES
+					if (!modetype.contains(mode)) {
+						IOException e = new IOException("Invalid arguemnts: "
+								+ usageErrorMsg);
+						throw e;
+					}
+					if (mode.equalsIgnoreCase(modetype.get(1))) {
+
+						if (args.length > 1) {// Optional data arguments are specified
+
+							if (args.length == 3) {
+								// check Validity of dateFrom, dateTo
+								Date dateFrom = convertDateString(mode = args[1]);
+								Date dateTo   = convertDateString(mode = args[2]);
+								importInvestigatinsGotFromSMIS(DateToCalendar(dateFrom), DateToCalendar(dateTo));
+							} else {
+								IOException e = new IOException("Invalid number of arguemnts: ");
+								throw e;
+							}
+						}else{
+							// run
+							importInvestigatinsGotFromSMIS();
+						}
+					} else {
+						// Run importation an all date on 'Disk'
+						testAllRun();
+					}
+
+				} catch (Exception e) {
+					logger.error(e.getMessage() + usageErrorMsg);
+					System.exit(1);
+				}
+			}else {
+				IOException e = new IOException("Invalid number of arguemnts: ");
+				throw e;
+			}
+
 		} catch (FileNotFoundException e1) {
-			logger.error("File '"+configFile+"' not found. It contains necessary information for the execution."+ e1.getMessage());
-			
+			logger
+					.error("File '"
+							+ configFile
+							+ "' not found. It contains necessary information for the execution."
+							+ e1.getMessage());
+
 		} catch (Exception e) {
-			logger.error("Impossible ingest metadata file. \n" + e.getMessage());
+			logger.error(e.getMessage() + usageErrorMsg);
+			System.exit(1);
 		}
 	}
 
+	private static final DateFormat DEFAULT_FORMATTER;
+	static {
+		DEFAULT_FORMATTER = new SimpleDateFormat("yyyy-MM-dd");
+		DEFAULT_FORMATTER.setLenient(false);
+	}
+
+	public static Date convertDateString(String dateString)
+			throws ParseException {
+		return DEFAULT_FORMATTER.parse(dateString);
+	}
+	
+	public static Calendar DateToCalendar(Date date){ 
+		  Calendar cal = Calendar.getInstance();
+		  cal.setTime(date);
+		  return cal;
+	}
+
+	/**
+	 * Without parameter, it return the list of experiments performed on the last 24 hours 
+	 * and run the importation on those experiments.
+	 * @throws Exception
+	 */
 	public static void importInvestigatinsGotFromSMIS() throws Exception {
 
 		/*
-		 * Specify the time slot you are interest in the form of <initialDate> : <finalDate>
+		 * Specify the time slot you are interest in the form of <initialDate> :
+		 * <finalDate>
 		 */
-		Calendar calFrom = Calendar.getInstance();//  new GregorianCalendar(2013, 01, 01);
-		calFrom.add(Calendar.DATE, -1);			  //  YESTERDAY  
-		Calendar calTo = Calendar.getInstance();  //  TODAY      new GregorianCalendar(2013, 05, 31);
+		Calendar calFrom = Calendar.getInstance();// new GregorianCalendar(2013, 01, 01);
+		calFrom.add(Calendar.DATE, -1);          // YESTERDAY
+		Calendar calTo = Calendar.getInstance(); // TODAY 
+		importInvestigatinsGotFromSMIS( calFrom,  calTo);		
+	}
+	
+	/**
+	 * Giving two dates, it return the list of experiments performed on thi time period 
+	 * and run the importation on those experiments.
+	 * 
+	 * @param calFrom
+	 * @param calTo
+	 * @throws Exception
+	 */
+	public static void importInvestigatinsGotFromSMIS(Calendar calFrom, Calendar calTo) throws Exception {
 		
-		List<String> listOfTomoDBFiles = SmisUtils
-				.getInvestigationsByDates(calFrom, calTo);
+		List<String> listOfTomoDBFiles = SmisUtils.getInvestigationsByDates(
+				calFrom, calTo);
 
-		if (listOfTomoDBFiles.isEmpty()){
+		if (listOfTomoDBFiles.isEmpty()) {
 			logger.info("No metadata to import.");
+			return;
 		}
 
 		for (String file : listOfTomoDBFiles) {
 
-			System.out.println("--> IMPORTING file: " + file);
+			logger.info("IMPORTING file: " + file);
 			try {
 				run(file);
 			} catch (Exception e) {
@@ -129,10 +207,12 @@ public class IcatPilotIngester {
 		for (int i = 0; i < directories.length; i++) {
 			proposalDir = directories[i];
 
-			if (!proposalDir.contains("in")) { // exclude all INDUSTRIAL proposals
+			if (!proposalDir.contains("in")) { // exclude all INDUSTRIAL
+												// proposals
 
 				String beamlinePath = ROOT_DIRECTORY + proposalDir;
-				File beamlineFile = new File(beamlinePath); // === BeamlineName directory
+				File beamlineFile = new File(beamlinePath); // === BeamlineName
+															// directory
 				// ===
 				FilenameFilter textFilter = new FilenameFilter() {
 					// Select only folder listed in "instruments"
@@ -149,20 +229,23 @@ public class IcatPilotIngester {
 
 				// Loop over all beamlines sub-directory listed in the
 				// "filenamefilter"
-				for (int n = 0; beamlineDirectories != null && n < beamlineDirectories.length; n++) {
+				for (int n = 0; beamlineDirectories != null
+						&& n < beamlineDirectories.length; n++) {
 
 					String beamlineDir = beamlineDirectories[n];
 
-					String dataSetPath = beamlinePath + File.separatorChar + beamlineDir;
+					String dataSetPath = beamlinePath + File.separatorChar
+							+ beamlineDir;
 
 					File datasetFile = new File(dataSetPath); // === DatasetName
 					// directory ===
-					String[] datasetDirectories = datasetFile.list(new FilenameFilter() {
-						@Override
-						public boolean accept(File dir, String name) {
-							return new File(dir, name).isDirectory();
-						}
-					});
+					String[] datasetDirectories = datasetFile
+							.list(new FilenameFilter() {
+								@Override
+								public boolean accept(File dir, String name) {
+									return new File(dir, name).isDirectory();
+								}
+							});
 
 					for (int j = 0; j < datasetDirectories.length; j++) {
 
@@ -184,7 +267,8 @@ public class IcatPilotIngester {
 								}
 							}
 						};
-						// Htere must be only one (can't exist 2 files with same name and location)
+						// Htere must be only one (can't exist 2 files with same
+						// name and location)
 						File[] tomodbFilename = tomodbFile.listFiles(filter);
 
 						if (tomodbFilename != null && tomodbFilename.length > 0) {
@@ -194,8 +278,8 @@ public class IcatPilotIngester {
 								// System.out.println(tomoDB_filePath +
 								// File.separatorChar + s3 + ".xml");
 
-								run(tomoDB_filePath + File.separatorChar + datasetDir
-										+ ".xml");
+								run(tomoDB_filePath + File.separatorChar
+										+ datasetDir + ".xml");
 
 							} catch (Exception e) {
 								logger.error(e.getMessage());
@@ -206,7 +290,8 @@ public class IcatPilotIngester {
 			}
 		}
 
-		logger.info("FINISH - All "+BEAMLINES+" proposals with investigations has been inported....");
+		logger.info("FINISH - All " + BEAMLINES
+				+ " proposals with investigations has been inported....");
 
 	}
 
@@ -217,24 +302,22 @@ public class IcatPilotIngester {
 	 * Giving a file path to a TomoDB xml file, the procedure ingest all
 	 * required data in ICAT
 	 */
-	@SuppressWarnings("unchecked")
 	public static void run(String remoteFileName) throws Exception {
 
 		/*
-		 * Define name and location of required files  
+		 * Define name and location of required files
 		 */
 		String currentDir = System.getProperty("user.dir");
 		String path = currentDir.concat(File.separatorChar + "resources"
 				+ File.separatorChar);
 		String tomoDB_XML = path + "imput.xml";
-		String inXSL      = path + "tomoDB_to_Icat.xsl";
-		String outTXT     = path + "tomoTest.xml";
+		String inXSL = path + "tomoDB_to_Icat.xsl";
+		String outTXT = path + "tomoTest.xml";
 
-		
 		logger
-		.info("BEGIN ingestion of TomoDB file: '" + remoteFileName
-				+ "'.");
-		
+				.info("BEGIN ingestion of TomoDB file: '" + remoteFileName
+						+ "'.");
+
 		// Retrieve TomoDB XML file and copy it locally
 		// ---------------------------------------------------------------------
 		try {
@@ -287,7 +370,7 @@ public class IcatPilotIngester {
 			removeLineContainigStringFromFile(xmlFile, "<DataSetName>");
 
 			// Do an 'ls -al *.edf' on the folder containing the TomoDB XML
-			// file, format filename and sizes as ICAT Datafiles parameeters 
+			// file, format filename and sizes as ICAT Datafiles parameeters
 			// xml record and append them at the end of the XML file.
 			// ---------------------------------------------------------------------
 			readRemoteFolder_FormatXML_AppendToFile(remoteFileName.substring(0,
@@ -369,14 +452,14 @@ public class IcatPilotIngester {
 				} catch (NumberFormatException e) {
 					throw (new IOException(
 							"Unexpected porosal Number. "
-									+ "Proposal number must be an Integer. Expected: IS1234; Received: "
+									+ "Proposal number must be an Integer. Expected: is1234; Received: "
 									+ proposalName));
 				}
 			} else {
 				// contains other chars
 				throw (new IOException(
 						"Unexpected porosal Name."
-								+ "Proposal type must contain only characters. Expected: IS1234;  Received: "
+								+ "Proposal type must contain only characters. Expected: is1234;  Received: "
 								+ proposalName));
 			}
 
@@ -457,14 +540,15 @@ public class IcatPilotIngester {
 	 * @param match
 	 * @throws Exception
 	 */
-	public static void removeLineContainigStringFromFile(File xmlFile, String match)
-			throws Exception {
+	public static void removeLineContainigStringFromFile(File xmlFile,
+			String match) throws Exception {
 		RandomAccessFile raf = null;
 		try {
 			raf = new RandomAccessFile(xmlFile, "rw");
 		} catch (FileNotFoundException e) {
-			logger.error("Impossible to open in R/W mode file: '"+xmlFile+"'. "+e.getMessage());
-			throw(e);
+			logger.error("Impossible to open in R/W mode file: '" + xmlFile
+					+ "'. " + e.getMessage());
+			throw (e);
 		}
 		String replacingString = " ";
 		long pointer;
@@ -493,8 +577,8 @@ public class IcatPilotIngester {
 				}
 			}
 		} catch (IOException e) {
-			logger.error("Impossible access file: '"
-					+ xmlFile + "'. " + e.getMessage());
+			logger.error("Impossible access file: '" + xmlFile + "'. "
+					+ e.getMessage());
 			Exception ex = new IOException("Impossible access file: '"
 					+ xmlFile + "'. " + e.getMessage());
 			throw (ex);
@@ -520,8 +604,9 @@ public class IcatPilotIngester {
 		try {
 			raf = new RandomAccessFile(xmlFile, "rw");
 		} catch (FileNotFoundException e) {
-			logger.error("Impossible to open in R/W mode file: '"+xmlFile+"'. "+e.getMessage());
-			throw(e);
+			logger.error("Impossible to open in R/W mode file: '" + xmlFile
+					+ "'. " + e.getMessage());
+			throw (e);
 		}
 		long pointer;
 		try {
@@ -548,8 +633,8 @@ public class IcatPilotIngester {
 				}
 			}
 		} catch (IOException e) {
-			logger.error("Impossible access file: '"
-					+ xmlFile + "'. " + e.getMessage());
+			logger.error("Impossible access file: '" + xmlFile + "'. "
+					+ e.getMessage());
 			Exception ex = new IOException("Impossible access file: '"
 					+ xmlFile + "'. " + e.getMessage());
 			throw (ex);
@@ -600,7 +685,7 @@ public class IcatPilotIngester {
 		importXmlFile(xmlFileName, IcatSession.INGESTER_USER);
 
 	}
-	
+
 	// --------------------------------------------------------------------
 	/**
 	 * Import a specific xml (must be in ICAT format) file in Icat
@@ -832,7 +917,6 @@ public class IcatPilotIngester {
 		return (xmlFormat);
 	} // printNode(Node)
 
-	
 	// --------------------------------------------------------------------
 	/**
 	 * Copy a file from a location to another
@@ -863,13 +947,10 @@ public class IcatPilotIngester {
 				+ "'");
 
 	}
-	
+
 	/**
 	 * 
-	 * Before
-	 * 	<test>blablabla</test>
-	 * After
-	 * 	<!--t>blablabla</te-->
+	 * Before <test>blablabla</test> After <!--t>blablabla</te-->
 	 * 
 	 * @param xmlFile
 	 * @param tag
@@ -887,13 +968,16 @@ public class IcatPilotIngester {
 			while ((lineData = raf.readLine()) != null) {
 				pointer = raf.getFilePointer() - lineData.length() - 2;
 				if (lineData.indexOf(tag) >= 0) {
-					if (tag.contains("/")){
+					if (tag.contains("/")) {
 						raf.seek(pointer);
 						String str = lineData;
 						str = str.replace(tag, commentEnd);
 						raf.writeBytes(str);
-						tag = tag.substring(1, tag.length()-2); // re-create original tag
-						// if the replacingString has less number of characters than
+						tag = tag.substring(1, tag.length() - 2); // re-create
+																	// original
+																	// tag
+						// if the replacingString has less number of characters
+						// than
 						// the matching string line then enter blank spaces.
 						if (str.length() < lineData.length()) {
 							int difference = (lineData.length() - str.length());// +1;
@@ -901,8 +985,8 @@ public class IcatPilotIngester {
 								raf.writeBytes(" ");
 							}
 						}
-						
-					}else{
+
+					} else {
 						raf.seek(pointer);
 						String str = lineData;
 						str = str.replace(tag, commentBegin);
@@ -910,31 +994,25 @@ public class IcatPilotIngester {
 						tag = "/".concat(tag).concat(">"); // create closing tag
 						// Now will search closing tag
 					}
-					
-					
+
 					// if the replacingString has less number of characters than
 					// the matching string line then enter blank spaces.
-					/*if (str.length() < lineData.length()) {
-						int difference = (lineData.length() - str.length());// +1;
-						for (int i = 0; i <= difference; i++) {
-							raf.writeBytes(" ");
-						}
-					}*/
-					
-					
-					
+					/*
+					 * if (str.length() < lineData.length()) { int difference =
+					 * (lineData.length() - str.length());// +1; for (int i = 0;
+					 * i <= difference; i++) { raf.writeBytes(" "); } }
+					 */
+
 				}// else String not found
 			}
 			raf.close();
 		} catch (IOException e) {
-			logger.error("Impossible access file: '"
-					+ xmlFile + "'. " + e.getMessage());
+			logger.error("Impossible access file: '" + xmlFile + "'. "
+					+ e.getMessage());
 			Exception ex = new IOException("Impossible access file: '"
 					+ xmlFile + "'. " + e.getMessage());
 			throw (ex);
 		}
 	}
-	
-	
 
 }
